@@ -1,5 +1,3 @@
-"use client";
-
 import "./global.css";
 import "./fonts.css";
 import gtm1 from "./gtm-1.js";
