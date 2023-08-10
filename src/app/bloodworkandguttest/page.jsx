@@ -31,7 +31,7 @@ function GutServiceScreen() {
     affirm.checkout({
       merchant: {
         user_confirmation_url: `${baseUrl}/checkout`,
-        user_cancel_url: `${baseUrl}/canceled`,
+        user_cancel_url: `${baseUrl}/bloodworkandguttest`,
         user_confirmation_url_action: "GET",
         name: "Bodybuilding & BS",
       },
