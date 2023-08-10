@@ -1,32 +1,43 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useEffect, useState, useRef } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import Nick from "../media/nick.png";
 import BBLogo from "../media/BBLogo.png";
 import USflag from "../media/usflag.png";
 import IFBB from "../media/ifbb.png";
 import AffirmLogo from "../media/affirm-logo.webp";
+import { useLayoutEffect } from "react";
 
 function GutServiceScreen() {
-  // const navigate = useNavigate();
+  const [IsGutActive, setIsGutActive] = useState(false);
+  const GutSection = useRef();
   const GutRef = useRef();
   const handleCTA = () => {
     GutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   useEffect(() => {
+    if (IsGutActive === true) {
+      GutSection.current?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsGutActive(false);
+  }, []);
+
+  /*  */
+
+  useLayoutEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   }, []);
 
   function HandleAffirmButton(name, price) {
     affirm.checkout({
       merchant: {
-        user_confirmation_url: "https://bodybuilding-bs.vercel.app/checkout",
-        user_cancel_url: "https://bodybuilding-bs.vercel.app/canceled",
+        user_confirmation_url: "/checkout",
+        user_cancel_url: "/canceled",
         user_confirmation_url_action: "GET",
         name: "Bodybuilding & BS",
       },
@@ -68,26 +79,9 @@ function GutServiceScreen() {
           sku: "ABC-123",
           unit_price: price,
           qty: 1,
-          // item_image_url: "http://merchantsite.com/images/awesome-pants.jpg",
-          // item_url: "http://merchantsite.com/products/awesome-pants.html",
-          // categories: [
-          //   ["Home", "Bedroom"],
-          //   ["Home", "Furniture", "Bed"],
-          // ],
         },
       ],
-      // discounts: {
-      //   RETURN5: {
-      //     discount_amount: 500,
-      //     discount_display_name: "Returning customer 5% discount",
-      //   },
-      //   PRESDAY10: {
-      //     discount_amount: 1000,
-      //     discount_display_name: "President's Day 10% off",
-      //   },
-      // },
       metadata: {
-        // shipping_type: "UPS Ground",
         mode: "modal",
       },
       order_id: "JKLMO4321",
@@ -110,7 +104,7 @@ function GutServiceScreen() {
         <div className="hero-container">
           <div className="hero-text">
             <Link href="/">
-              <img src={BBLogo} className="bbs--logo" alt="" />
+              <Image src={BBLogo} className="bbs--logo" alt="" />
             </Link>
             <h1 className="heading-text">
               Boost your <br />
@@ -123,11 +117,11 @@ function GutServiceScreen() {
         </div>
         <div className="hero__bullet-points">
           <div>
-            <img src={IFBB} alt="" />
+            <Image src={IFBB} alt="" />
             <p>IFBB Pro</p>
           </div>
           <div className="">
-            <img src={USflag} alt="" />
+            <Image src={USflag} alt="" />
             <p>Former Mr. Usa</p>
           </div>
         </div>
@@ -148,15 +142,15 @@ function GutServiceScreen() {
             <div className="card-container card-container--bloodwork">
               <h2 className="medium-text">Bloodwork</h2>
 
-              <h4 className="card-text-price">$249</h4>
+              <h4 className="card-text-price">$299</h4>
               <ul>
                 <li className="card-list">
                   One Time Plan to improve condition
                 </li>
-                <li className="card-list">Supplements and remedy protocols</li>
-                <li className="card-list">Dietary adjustments</li>
-                <li className="card-list">Advice of lifestyle habits</li>
-                <li className="card-list">Training if needed</li>
+                <li className="card-list">Supplements and Remedy Protocols</li>
+                <li className="card-list">Dietary Adjustments</li>
+                <li className="card-list">Advice of Lifestyle Habits</li>
+                <li className="card-list">Training if Needed</li>
               </ul>
               <a
                 target="_blank"
@@ -165,19 +159,19 @@ function GutServiceScreen() {
               >
                 <button className="button">Purchase</button>
               </a>
-              {/* <a className="purchase-button-link">
+              <a className="purchase-button-link">
                 <button
                   className="button button--affirm"
                   onClick={() => HandleAffirmButton("Bloodwork", 24900)}
                 >
                   Pay with
-                  <img
+                  <Image
                     src={AffirmLogo}
                     alt="Affirm Logo"
                     className="img--afirm"
                   />
                 </button>
-              </a> */}
+              </a>
             </div>
 
             <div className="blood-gut-text">
@@ -185,14 +179,15 @@ function GutServiceScreen() {
                 We use data about cholesterol and hormone levels, nutritional
                 deficiencies and more to identify potential health risks, make
                 dietary considerations, and adjust our training programs to
-                support your well-being. 
+                support your well-being.
               </p>
               <br />
               <br />
               <p>
-                You can bring your most recent blood work to be evaluated or we
-                can arrange a new blood work test at a trusted clinic for an
-                extra fee.
+                *If you do not have blood work to provide, no problem! I work
+                with Aspire Rejuvenation Clinic and we can service anyone living
+                in the United States. This service is available at an additional
+                fee.
               </p>
               {/*  <img src={Blood} alt="" /> */}
             </div>
@@ -200,22 +195,33 @@ function GutServiceScreen() {
           <div className="card-wrapper card-wrapper--gut mn">
             <div className="blood-gut-text">
               <p>
-                It’s important to understand your gut microbiome composition,
+                It's important to understand your gut microbiome composition,
                 and we test for parasites, bacteria, and any other digestive
                 problems. These tests help me make dietary adjustments and
                 recommendations to promote better digestion.
               </p>
+              <br />
+              <br />
+              <p>
+                *Any additional tests or remedies needed will have an extra
+                cost.
+              </p>
             </div>
-            <div className="card-container card-container--gutcard-container--gut">
+            <div
+              className="card-container card-container--gutcard-container--gut"
+              ref={GutSection}
+            >
               <h2 className="medium-text">Gut Health Test</h2>
 
-              <h4 className="card-text-price">$349</h4>
+              <h4 className="card-text-price">$799</h4>
               <ul>
-                <li className="card-list">Test analysis</li>
-                <li className="card-list">Full report</li>
+                <li className="card-list">Test Analysis</li>
+                <li className="card-list">Full Report</li>
                 <li className="card-list">
-                  Follow up consultation to act on findings
+                  Follow Up Consultation to Act on Findings
                 </li>
+                <li className="card-list">Transparet DNA Test Analysis</li>
+                <li className="card-list">Training and Nutritional Guidance</li>
               </ul>
               <a
                 target="_blank"
@@ -224,19 +230,19 @@ function GutServiceScreen() {
               >
                 <button className="button">Purchase</button>
               </a>
-              {/* <a className="purchase-button-link">
+              <a className="purchase-button-link">
                 <button
                   className="button button--affirm"
                   onClick={() => HandleAffirmButton("Gut Health Test", 34900)}
                 >
                   Pay with
-                  <img
+                  <Image
                     src={AffirmLogo}
                     alt="Affirm Logo"
                     className="img--afirm"
                   />
                 </button>
-              </a> */}
+              </a>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import logoImg from "../media/BBLogo.png";
 import { BiMenu } from "react-icons/bi";
 import { IoCloseOutline } from "react-icons/io5";
@@ -65,7 +66,7 @@ const Header = () => {
     >
       <div className="header-wrapper">
         <div className="logo-container">
-          <img src={logoImg} className="logo-img" alt="" />
+          <Image src={logoImg} className="logo-img" alt="" />
         </div>
 
         <div

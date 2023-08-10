@@ -2,12 +2,13 @@
 
 import Blood from "../media/blood.png";
 import Link from "next/link";
+import Image from "next/image";
 
 function Bloodwork() {
   return (
     <div className="blood-work--block mn">
       <div className="work--block__img">
-        <img src={Blood} alt="" />
+        <Image src={Blood} />
       </div>
       <div className="work--block__text">
         <h3>

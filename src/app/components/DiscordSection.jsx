@@ -2,12 +2,13 @@
 
 import { FiArrowUpRight } from "react-icons/fi";
 import NickDiscord from "../media/NickDiscord.jpg";
+import Image from "next/image";
 
 function DiscordSection() {
   return (
     <div className="discord--block mn">
       <div className="discord--img">
-        <img src={NickDiscord} alt="Discord logo on top of Nick's Face" />
+        <Image src={NickDiscord} alt="Discord logo on top of Nick's Face" />
       </div>
       <div className="discord--text">
         <h2>

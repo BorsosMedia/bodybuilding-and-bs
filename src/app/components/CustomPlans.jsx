@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
 import React from "react";
 import AffirmLogo from "../media/affirm-logo.webp";
+import Image from "next/image";
 
 function CustomPlans() {
   function HandleAffirmButton(name, price) {
@@ -50,26 +51,9 @@ function CustomPlans() {
           sku: "ABC-123",
           unit_price: price,
           qty: 1,
-          // item_image_url: "http://merchantsite.com/images/awesome-pants.jpg",
-          // item_url: "http://merchantsite.com/products/awesome-pants.html",
-          // categories: [
-          //   ["Home", "Bedroom"],
-          //   ["Home", "Furniture", "Bed"],
-          // ],
         },
       ],
-      // discounts: {
-      //   RETURN5: {
-      //     discount_amount: 500,
-      //     discount_display_name: "Returning customer 5% discount",
-      //   },
-      //   PRESDAY10: {
-      //     discount_amount: 1000,
-      //     discount_display_name: "President's Day 10% off",
-      //   },
-      // },
       metadata: {
-        // shipping_type: "UPS Ground",
         mode: "modal",
       },
       order_id: "JKLMO4321",
@@ -103,9 +87,10 @@ function CustomPlans() {
             <li>Tracking & Accountability App</li>
             <li>Customized</li>
             <li>Fast Delivery</li>
+            <li>No Check-ins</li>
           </ul>
           <div className="buttons--wrapper buttons--wrapper__horizontal">
-            {/* <a className="purchase-button-link">
+            <a className="purchase-button-link">
               <button
                 className="button button--affirm"
                 onClick={() =>
@@ -113,13 +98,13 @@ function CustomPlans() {
                 }
               >
                 Pay with
-                <img
+                <Image
                   src={AffirmLogo}
                   alt="Affirm Logo"
                   className="img--afirm"
                 />
               </button>
-            </a> */}
+            </a>
             <a
               href="https://payments.bodybuildingandbs.com/3-months-bulking-plan"
               target="_blank"
@@ -143,9 +128,10 @@ function CustomPlans() {
             <li>Tracking & Accountability App</li>
             <li>Customized</li>
             <li>Fast Delivery</li>
+            <li>Does not include check-ins</li>
           </ul>
           <div className="buttons--wrapper buttons--wrapper__horizontal">
-            {/* <a className="purchase-button-link">
+            <a className="purchase-button-link">
               <button
                 className="button button--affirm"
                 onClick={() =>
@@ -153,13 +139,13 @@ function CustomPlans() {
                 }
               >
                 Pay with
-                <img
+                <Image
                   src={AffirmLogo}
                   alt="Affirm Logo"
                   className="img--afirm"
                 />
               </button>
-            </a> */}
+            </a>
             <a
               href="https://payments.bodybuildingandbs.com/3-months-shredding-plan"
               target="_blank"
@@ -182,9 +168,10 @@ function CustomPlans() {
             <li>Tracking & Accountability App</li>
             <li>Customized</li>
             <li>Fast Delivery</li>
+            <li>No Check-ins Included</li>
           </ul>
           <div className="buttons--wrapper buttons--wrapper__horizontal">
-            {/* <a className="purchase-button-link">
+            <a className="purchase-button-link">
               <button
                 className="button button--affirm"
                 onClick={() =>
@@ -192,13 +179,13 @@ function CustomPlans() {
                 }
               >
                 Pay with
-                <img
+                <Image
                   src={AffirmLogo}
                   alt="Affirm Logo"
                   className="img--afirm"
                 />
               </button>
-            </a> */}
+            </a>
             <a
               href="https://payments.bodybuildingandbs.com/3-months-body-recomposition-plan"
               target="_blank"
@@ -221,9 +208,10 @@ function CustomPlans() {
             <li>Tracking & Accountability App</li>
             <li>Customized</li>
             <li>Fast Delivery</li>
+            <li>No Check-ins</li>
           </ul>
           <div className="buttons--wrapper buttons--wrapper__horizontal">
-            {/* <a className="purchase-button-link">
+            <a className="purchase-button-link">
               <button
                 className="button button--affirm"
                 onClick={() => {
@@ -231,13 +219,13 @@ function CustomPlans() {
                 }}
               >
                 Pay with
-                <img
+                <Image
                   src={AffirmLogo}
                   alt="Affirm Logo"
                   className="img--afirm"
                 />
               </button>
-            </a> */}
+            </a>
             <a
               href="https://payments.bodybuildingandbs.com/6-week-revers-diet-plan"
               target="_blank"

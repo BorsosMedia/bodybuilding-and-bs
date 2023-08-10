@@ -1,9 +1,9 @@
 "use client";
 
-import Footer from "./components/Footer";
-import "./index.css";
+import "./global.css";
 import "./fonts.css";
 import affirm from "./affirm.js";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Bodybuilding & BS",

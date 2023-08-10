@@ -8,7 +8,7 @@ function InquiryMessage() {
   return (
     <div className="inquiry--wrapper">
       <div className="inquiry--block mn">
-        <h5>Answers for all your questions, right away</h5>
+        <h5>Get Answers for All Your Questions Right Away</h5>
         <p>
           I know you can have a lot of questions even before beginning your
           fitness journey. However, I'm here to answer all of them quickly, at

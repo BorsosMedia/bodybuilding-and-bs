@@ -1,9 +1,12 @@
 "use client";
 
 import React from "react";
+import { BsInstagram } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { TbBrandTiktok } from "react-icons/tb";
 import RumbleLogo from "../media/rumble-logo.png";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -19,17 +22,17 @@ const Footer = () => {
         <div className="social-media-container">
           <a href="https://www.instagram.com/bodybuildingandbs" target="_blank">
             <div className="icon-sm-container">
-              <AiOutlineInstagram className="icon-svg" />
+              <BsInstagram className="icon-svg" />
             </div>
           </a>
           <a href="https://www.tiktok.com/@bodybuildingandbs" target="_blank">
             <div className="icon-sm-container">
-              <TbBrandTiktok className="icon-svg" />
+              <FaTiktok className="icon-svg" />
             </div>
           </a>
           <a href="https://rumble.com/user/bodybuildingandbs" target="_blank">
             <div className="icon-sm-container">
-              <img src={RumbleLogo} className="icon-svg" alt="" />
+              <Image src={RumbleLogo} className="icon-svg" alt="" />
             </div>
           </a>
         </div>

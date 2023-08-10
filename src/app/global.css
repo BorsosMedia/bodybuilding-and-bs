@@ -1,6 +1,13 @@
-url html {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
   font-size: 16px;
 }
+
 body::-webkit-scrollbar {
   width: 0.6rem;
 }
@@ -13,9 +20,10 @@ body::-webkit-scrollbar-thumb {
   background: #eded00;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+body:hover::-webkit-scrollbar-thumb {
   background: #eded00;
 }
+
 :root {
   --black-color: #222222;
   --primary-color: #eded00;
@@ -27,14 +35,9 @@ body::-webkit-scrollbar-thumb:hover {
   --white-color: #ffffff;
   --min-height: 3rem;
   --width-wrapper: 46rem;
+  --text-max-width: 27rem;
   --radius: 2rem;
   --text-spacing: 0.5rem;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 /* Global styles */
@@ -47,7 +50,7 @@ h6,
 button {
   font-family: Robinson Rough !important;
   letter-spacing: 2px;
-  line-height: 90%;
+  line-height: 82.5%;
 }
 
 h1 {
@@ -119,6 +122,36 @@ body
   margin: 2rem auto !important;
 }
 
+/* Gut Home Section */
+.gut--section-wrapper {
+  margin: 2rem auto;
+  padding-inline: 1rem;
+  max-width: 54rem;
+}
+.gut--section-wrapper h2 {
+  text-align: center;
+}
+
+.gut--section-wrapper p:nth-of-type(1) {
+  margin-bottom: 0.8rem;
+  max-width: calc(var(--text-max-width) - -5rem);
+  margin-inline: auto;
+  text-align: center;
+}
+.gut-section--container {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.gut-section--container img {
+  width: 100%;
+}
+.gut--section-wrapper .button {
+  max-width: 12.06rem;
+  margin: 0 auto;
+}
+
 /*  */
 
 .pricing-container .paragraph-text,
@@ -161,10 +194,12 @@ ul {
   width: min-content;
   margin-inline: auto;
 }
+
 .bullet--facts {
   color: var(--white-color);
   display: grid;
-  gap: 0.8rem;
+  column-gap: 0.8rem;
+  row-gap: 0.5rem;
   grid-template-columns: 30px max-content;
 }
 
@@ -180,6 +215,7 @@ ul {
   grid-column: -1/1;
   letter-spacing: 0.8px;
 }
+
 .button {
   display: flex;
   align-items: center;
@@ -202,6 +238,7 @@ ul {
   font-size: 1.8rem !important;
   color: var(--primary-color);
 }
+
 .button--return {
   max-width: 18.06rem;
   margin-inline: auto;
@@ -349,7 +386,7 @@ a {
 }
 .services--block h2,
 .services--block p {
-  max-width: 28.25rem;
+  max-width: var(--text-max-width);
   margin-inline: auto;
   text-align: center;
 }
@@ -396,7 +433,7 @@ a {
 .plans--container__custom > p {
   margin-bottom: 2rem;
   text-align: center;
-  max-width: 28rem;
+  max-width: var(--text-max-width);
   margin-inline: auto;
 }
 
@@ -539,7 +576,7 @@ a {
 
 /* Bloodwork */
 .blood-work--block {
-  background: url(./media/brushh-mobile2.png);
+  background: url("./media/brushh-mobile2.png");
   background-size: 100% 100%;
   background-position: center;
   padding: 2rem 4rem;
@@ -599,12 +636,12 @@ a {
 }
 .inquiry--block p {
   font-family: Big Shoulders Regular;
-  max-width: 30rem;
+  max-width: calc(var(--text-max-width) + 1rem);
   margin-inline: auto;
 }
 .inquiry--wrapper::before {
   content: "";
-  background: url(./media/top-layer.png);
+  background: url("./media/top-layer.png");
   position: absolute;
   top: -19px;
   left: 0;
@@ -616,7 +653,7 @@ a {
 }
 .inquiry--wrapper::after {
   content: "";
-  background: url(./media/bottom-layer.png);
+  background: url("./media/bottom-layer.png");
   position: absolute;
   bottom: -25px;
   left: 0;
@@ -673,7 +710,7 @@ body .hl-app .form-builder--wrap {
 
 /*  */
 .hero-section {
-  background: url(media/background-gradient.jpg);
+  background: url("./media/background-gradient.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1021,7 +1058,7 @@ body .hl-app .form-builder--wrap {
 
 .footer-container {
   padding: 2rem 1rem;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
 }
 
 .footer-container .medium-text {
@@ -1107,11 +1144,15 @@ body .hl-app .form-builder--wrap {
   margin-right: auto;
   cursor: pointer;
 }
+.App {
+  background: url("./media/lg--bg.jpg");
+  background-size: 100%;
+  background-position: center;
+}
 .pricing-container,
 .gut-service__wrapper {
   padding: 3rem 0 2rem 0;
-  background: url("media/lg--bg.jpg");
-  background-size: 100%;
+
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1378,7 +1419,7 @@ black-friday-wrapper {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(./media/written-vector.png);
+  background: url("./media/written-vector.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -1797,6 +1838,10 @@ option {
   }
 }
 @media only screen and (min-width: 980px) {
+  /* .gut--section-wrapper p {
+    max-width: var(--text-max-width);
+    margin-inline: auto;
+  } */
   .faq--block {
     max-width: 100%;
     margin-inline: initial;
@@ -1808,6 +1853,10 @@ option {
 
   .blood-gut-text p {
     font-size: 1.5rem;
+  }
+  body .eapps-instagram-feed-header-container {
+    max-width: 980px !important;
+    margin-inline: auto !important;
   }
   body #eapps-instagram-feed-1 .eapps-instagram-feed-header {
     max-width: 983px !important;
@@ -1998,7 +2047,7 @@ option {
     flex-direction: column;
     justify-content: center;
     max-width: 338px;
-    gap: 2rem;
+    gap: 1rem;
   }
   .work--block__img {
     display: flex;
@@ -2042,7 +2091,7 @@ option {
     gap: 4rem;
   }
   .plan--block__container {
-    max-width: 30.62rem;
+    max-width: 32.62rem;
   }
   .plan--block__container:nth-of-type(1),
   .plan--block__container:nth-of-type(3) {
@@ -2215,6 +2264,12 @@ option {
 }
 
 @media screen and (min-width: 1440px) {
+  .work--block__text {
+    gap: 2rem;
+  }
+  /*  .gut--section-wrapper p {
+    max-width: var(--text-max-width);
+  } */
   .redirect--block,
   .results--page {
     height: calc(100% - 172px);

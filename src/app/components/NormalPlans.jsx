@@ -4,13 +4,9 @@ import { useState, useEffect } from "react";
 import { TbShoppingCart } from "react-icons/tb";
 import { FiChevronDown } from "react-icons/fi";
 import AffirmLogo from "../media/affirm-logo.webp";
+import Image from "next/image";
 
 const NormalPlans = ({ TypeOfPlan }) => {
-  const [FaqActiveA, setFaqActiveA] = useState(false);
-  const [FaqActiveB, setFaqActiveB] = useState(false);
-  const [FaqActiveC, setFaqActiveC] = useState(false);
-  const [FaqActiveD, setFaqActiveD] = useState(false);
-
   const baseUrl = "http://localhost:3000/";
 
   function HandleAffirmButton() {
@@ -86,26 +82,9 @@ const NormalPlans = ({ TypeOfPlan }) => {
             }
           })(),
           qty: 1,
-          // item_image_url: "http://merchantsite.com/images/awesome-pants.jpg",
-          // item_url: "http://merchantsite.com/products/awesome-pants.html",
-          // categories: [
-          //   ["Home", "Bedroom"],
-          //   ["Home", "Furniture", "Bed"],
-          // ],
         },
       ],
-      // discounts: {
-      //   RETURN5: {
-      //     discount_amount: 500,
-      //     discount_display_name: "Returning customer 5% discount",
-      //   },
-      //   PRESDAY10: {
-      //     discount_amount: 1000,
-      //     discount_display_name: "President's Day 10% off",
-      //   },
-      // },
       metadata: {
-        // shipping_type: "UPS Ground",
         mode: "modal",
       },
       order_id: "JKLMO4321",
@@ -340,7 +319,7 @@ const NormalPlans = ({ TypeOfPlan }) => {
             onClick={HandleAffirmButton}
           >
             Pay with
-            <img src={AffirmLogo} alt="Affirm Logo" className="img--afirm" />
+            <Image src={AffirmLogo} alt="Affirm Logo" className="img--afirm" />
           </button>
         </a>
       </div>

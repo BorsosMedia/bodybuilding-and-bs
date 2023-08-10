@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Nick from "./media/nick.png";
 import BBLogo from "./media/BBLogo.png";
@@ -18,29 +19,31 @@ import InquiryMessage from "./components/InquiryMessage";
 import Services from "./components/Services";
 import GoogleReviews from "./components/GoogleReviews";
 import InstagramWidget from "./components/InstagramWidget";
+import GutSection from "./components/GutSection";
+import { useLayoutEffect } from "react";
 
 function HomeScreen() {
+  const [IsGutActive, setIsGutActive] = useState(false);
   const [TypeOfPlan, setTypeOfPlan] = useState("a");
   const ref = useRef();
   const handleCTA = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   }, []);
   return (
     <>
       <main className="hero-section">
         <div className="heroImg"></div>
-        <img src={Nick} className="nick-crop" alt="" />
+        <Image src={Nick} className="nick-crop" alt="Nick" />
         {/*  <img src={maskGroup} className="maskImg" alt="" /> */}
         <div className="hero-container">
           <div className="hero-text">
             <Link href="/">
-              <img src={BBLogo} className="bbs--logo" alt="" />
+              <Image src={BBLogo} className="bbs--logo" alt="logo" />
             </Link>
             <h1 className="heading-text">
               Become The Best <br />
@@ -53,11 +56,11 @@ function HomeScreen() {
         </div>
         <div className="hero__bullet-points">
           <div>
-            <img src={IFBB} alt="" />
+            <Image src={IFBB} />
             <p>IFBB Pro</p>
           </div>
           <div className="">
-            <img src={USflag} alt="" />
+            <Image src={USflag} />
             <p>Former Mr. Usa</p>
           </div>
         </div>
@@ -65,18 +68,19 @@ function HomeScreen() {
 
       <section className="pricing-container">
         <div className="bg__text--background">
-          <img src={PaintStroke} alt="" />
+          <Image src={PaintStroke} />
           <h2 className="big-text">CONSISTENCY IS THE NAME OF THE GAME</h2>
         </div>
         <p className="paragraph-text hero-paragraph">
           <span className="primary-color-accent">Get ready</span> to tear down
-          obstacles of the mind and body. As an IFBB Pro and Former Mr. USA I've
-          acquired the necessary knowledge to help you reach any health and
-          fitness goal you may have through:
+          any obstacles your body and mind will find. As an IFBB pro and former
+          Mr. USA, I've gained enough experience to help you achieve your
+          fitness goals and change your life through:
         </p>
+
         <div className="bullet--block_wrapper">
           <div className="bullet--facts">
-            <img src={Lift} alt="" />
+            <Image src={Lift} />
             <h5>Hard Work</h5>
             <p>
               <span className="primary-color-accent">The real secret</span> of
@@ -84,7 +88,7 @@ function HomeScreen() {
             </p>
           </div>
           <div className="bullet--facts">
-            <img src={Health} alt="" />
+            <Image src={Health} />
             <h5>Healthy Nutrition</h5>
             <p>
               <span className="primary-color-accent">High powered</span> diets
@@ -92,7 +96,7 @@ function HomeScreen() {
             </p>
           </div>
           <div className="bullet--facts">
-            <img src={Protein} alt="" />
+            <Image src={Protein} />
             <h5>Accountability</h5>
             <p>
               <span className="primary-color-accent">Support and advice</span>{" "}
@@ -164,6 +168,7 @@ function HomeScreen() {
         <InquiryMessage />
         <CustomPlans />
         <Bloodwork />
+        <GutSection IsGutActive={IsGutActive} setIsGutActive={setIsGutActive} />
         <Services />
         <DiscordSection />
         <GoogleReviews />

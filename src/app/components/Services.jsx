@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import LSCoaching from "../media/services/lifestyle-coaching-min.png";
 import CPrep from "../media/services/competition-prep-min.png";
 import MProgram from "../media/services/mass-program-min.png";
@@ -32,47 +33,47 @@ function Services() {
           >
             <span>Lifestyle Coaching</span>
 
-            <img src={LSCoaching} alt="" />
+            <Image src={LSCoaching} alt="" />
           </li>
           <li
             className={ActiveImage == "b" && "active"}
             onClick={() => setActiveImage("b")}
           >
             <span>Shred program</span>
-            <img src={SProgram} alt="" />
+            <Image src={SProgram} alt="" />
           </li>
           <li
             className={ActiveImage == "c" && "active"}
             onClick={() => setActiveImage("c")}
           >
             <span>Competition Prep</span>
-            <img src={CPrep} alt="" />
+            <Image src={CPrep} alt="" />
           </li>
           <li
             className={ActiveImage == "d" && "active"}
             onClick={() => setActiveImage("d")}
           >
             <span>Nutrition Plans</span>
-            <img src={NPlans} alt="" />
+            <Image src={NPlans} alt="" />
           </li>
           <li
             className={ActiveImage == "e" && "active"}
             onClick={() => setActiveImage("e")}
           >
             <span>Mass Program</span>
-            <img src={MProgram} alt="" />
+            <Image src={MProgram} alt="" />
           </li>
           <li
             className={ActiveImage == "f" && "active"}
             onClick={() => setActiveImage("f")}
           >
             <span>Protocols and more</span>
-            <img src={Protocols} alt="" />
+            <Image src={Protocols} alt="" />
           </li>
         </ul>
         <ul className="services--img">
           <li className={ActiveImage == "a" && "span--img-active"}>
-            <img src={LSCoaching} alt="" />
+            <Image src={LSCoaching} alt="" />
             <div>
               <p>
                 Building the best version of ourselves is something we need to
@@ -81,7 +82,7 @@ function Services() {
             </div>
           </li>
           <li className={ActiveImage == "b" && "span--img-active"}>
-            <img src={SProgram} alt="" />
+            <Image src={SProgram} alt="" />
             <div>
               <p>
                 Get lean and ripped. We will work on lowering your body fat
@@ -90,7 +91,7 @@ function Services() {
             </div>
           </li>
           <li className={ActiveImage == "c" && "span--img-active"}>
-            <img src={CPrep} alt="" />
+            <Image src={CPrep} alt="" />
             <div>
               <p>
                 Get in peak form. With intensive training and customized
@@ -99,7 +100,7 @@ function Services() {
             </div>
           </li>
           <li className={ActiveImage == "d" && "span--img-active"}>
-            <img src={NPlans} alt="" />
+            <Image src={NPlans} alt="" />
             <div>
               <p>
                 Different physiques and specific goals require tailored
@@ -108,7 +109,7 @@ function Services() {
             </div>
           </li>
           <li className={ActiveImage == "e" && "span--img-active"}>
-            <img src={MProgram} alt="" />
+            <Image src={MProgram} alt="" />
             <div>
               <p>
                 Gain muscle and size. We will increase high volume training and
@@ -117,7 +118,7 @@ function Services() {
             </div>
           </li>
           <li className={ActiveImage == "f" && "span--img-active"}>
-            <img src={Protocols} alt="" />
+            <Image src={Protocols} alt="" />
             <div>
               <p>
                 I have procedures in place to support our training plan and I
