@@ -483,7 +483,7 @@ a {
 }
 .card-container.card-container--bloodwork {
   background: linear-gradient(180deg, #eb3800 0%, #e0e000 100%),
-    url(<path-to-image>), lightgray 50% / cover no-repeat;
+    lightgray 50% / cover no-repeat;
 }
 .card-container.card-container--bloodwork .medium-text,
 .card-container.card-container--bloodwork .card-list {
@@ -501,7 +501,7 @@ a {
 .card-wrapper.card-wrapper--gut .card-container {
   width: 100%;
   background: linear-gradient(180deg, #97de00 0%, #e0e000 100%),
-    url(<path-to-image>), lightgray 50% / cover no-repeat;
+    lightgray 50% / cover no-repeat;
 }
 .card-container--gut .medium-text {
   color: var(--white-color);
@@ -1215,7 +1215,7 @@ body .hl-app .form-builder--wrap {
   justify-content: space-between;
   gap: 1rem;
   background: linear-gradient(180deg, #ebeb00 0%, #e0e000 100%),
-    url(<path-to-image>), lightgray 50% / cover no-repeat;
+    lightgray 50% / cover no-repeat;
 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
