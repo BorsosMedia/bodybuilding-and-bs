@@ -1,7 +1,7 @@
 "use client";
 
 import "./global.css";
-import "../../public/fonts/styles.css";
+import "./fonts.css";
 import gtm1 from "./gtm-1.js";
 import gtm2 from "./gtm-2.js";
 import affirm from "./affirm.js";
