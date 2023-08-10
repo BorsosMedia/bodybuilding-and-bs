@@ -7,14 +7,13 @@ import AffirmLogo from "../media/affirm-logo.webp";
 import Image from "next/image";
 
 const NormalPlans = ({ TypeOfPlan }) => {
-  const baseUrl = "http://localhost:3000/";
-
+  const baseUrl = process.env.BASE_URL;
   function HandleAffirmButton() {
     useEffect;
     affirm.checkout({
       merchant: {
-        user_confirmation_url: `${baseUrl}checkout`,
-        user_cancel_url: `${baseUrl}canceled`,
+        user_confirmation_url: `${baseUrl}/checkout`,
+        user_cancel_url: `${baseUrl}/canceled`,
         user_confirmation_url_action: "GET",
         name: "Bodybuilding & BS",
       },

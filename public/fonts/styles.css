@@ -4,24 +4,24 @@
 
 @font-face {
   font-family: "Robinson Regular";
-  src: url("/media/fonts/Robinson-Regular.woff2") format("woff2");
+  src: url("./Robinson-Regular.woff2") format("woff2");
   font-weight: bold;
 }
 @font-face {
   font-family: "Calibri";
-  src: url("/media/fonts/calibri-regular.woff2") format("woff2");
+  src: url("./calibri-regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Robinson Rough";
-  src: url("/media/fonts/Robinson-Rough.woff2") format("woff2");
+  src: url("./Robinson-Rough.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Big Shoulders Light";
-  src: url("/media/fonts/BigShouldersDisplay-Light.woff2") format("woff2");
+  src: url("./BigShouldersDisplay-Light.woff2") format("woff2");
 }
 @font-face {
   font-family: "Big Shoulders Regular";
-  src: url("/media/fonts/BigShouldersDisplay-Regular.woff2") format("woff2");
+  src: url("./BigShouldersDisplay-Regular.woff2") format("woff2");
 }

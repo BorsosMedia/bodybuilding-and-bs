@@ -146,6 +146,7 @@ body
 }
 .gut-section--container img {
   width: 100%;
+  height: auto;
 }
 .gut--section-wrapper .button {
   max-width: 12.06rem;
@@ -181,10 +182,6 @@ ul {
   font-family: Robinson Regular !important;
 }
 
-.App {
-  background-color: var(--background-color);
-  overflow-x: hidden;
-}
 .bullet--block_wrapper {
   display: grid;
 
@@ -367,6 +364,7 @@ a {
   align-items: center;
 }
 .button.button--affirm .img--afirm {
+  width: auto;
   height: 1.2rem;
   transform: translateY(-4.5px) translateX(-7px);
 }
@@ -1139,15 +1137,18 @@ body .hl-app .form-builder--wrap {
 }
 
 .bbs--logo {
+  width: auto;
   height: 6rem;
   margin-bottom: 0.5rem;
   margin-right: auto;
   cursor: pointer;
 }
-.App {
+#root {
   background: url("./media/lg--bg.jpg");
   background-size: 100%;
   background-position: center;
+  background-color: var(--background-color);
+  overflow-x: hidden;
 }
 .pricing-container,
 .gut-service__wrapper {
@@ -2210,7 +2211,7 @@ option {
   .hero-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   .hero-section .button {
     align-self: flex-start;

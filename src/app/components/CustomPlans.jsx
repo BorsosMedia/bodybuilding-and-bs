@@ -5,11 +5,12 @@ import AffirmLogo from "../media/affirm-logo.webp";
 import Image from "next/image";
 
 function CustomPlans() {
+  const baseUrl = process.env.BASE_URL;
   function HandleAffirmButton(name, price) {
     affirm.checkout({
       merchant: {
-        user_confirmation_url: "https://bodybuilding-bs.vercel.app/checkout",
-        user_cancel_url: "https://bodybuilding-bs.vercel.app/canceled",
+        user_confirmation_url: `${baseUrl}/checkout`,
+        user_cancel_url: `${baseUrl}/canceled`,
         user_confirmation_url_action: "GET",
         name: "Bodybuilding & BS",
       },

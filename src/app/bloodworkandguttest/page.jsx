@@ -33,11 +33,12 @@ function GutServiceScreen() {
     });
   }, []);
 
+  const baseUrl = process.env.BASE_URL;
   function HandleAffirmButton(name, price) {
     affirm.checkout({
       merchant: {
-        user_confirmation_url: "/checkout",
-        user_cancel_url: "/canceled",
+        user_confirmation_url: `${baseUrl}/checkout`,
+        user_cancel_url: `${baseUrl}/canceled`,
         user_confirmation_url_action: "GET",
         name: "Bodybuilding & BS",
       },
