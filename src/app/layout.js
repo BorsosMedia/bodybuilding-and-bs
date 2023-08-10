@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-QQG4XG8LJG"
         ></script>
-        {/* <script src={gtm1}></script> */}
-        {/* <script src={gtm2}></script> */}
+        <script src={gtm1}></script>
+        <script src={gtm2}></script>
         <script src={affirm}></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
             src="https://www.googletagmanager.com/ns.html?id=GTM-MQCGDF6W"
             height="0"
             width="0"
-            style="display: none; visibility: hidden"
+            style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
         <div id="root">
