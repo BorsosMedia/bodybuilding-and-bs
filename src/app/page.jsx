@@ -39,11 +39,15 @@ function HomeScreen() {
       <main className="hero-section">
         <div className="heroImg"></div>
         <Image src={Nick} className="nick-crop" alt="Nick" />
-        {/*  <img src={maskGroup} className="maskImg" alt="" /> */}
+
         <div className="hero-container">
           <div className="hero-text">
             <Link href="/">
-              <Image src={BBLogo} className="bbs--logo" alt="logo" />
+              <Image
+                src={BBLogo}
+                className="bbs--logo"
+                alt="Bodybuilding & BS Logo"
+              />
             </Link>
             <h1 className="heading-text">
               Become The Best <br />
@@ -56,11 +60,11 @@ function HomeScreen() {
         </div>
         <div className="hero__bullet-points">
           <div>
-            <Image src={IFBB} />
+            <Image src={IFBB} alt="IFBB Logo" />
             <p>IFBB Pro</p>
           </div>
           <div className="">
-            <Image src={USflag} />
+            <Image src={USflag} alt="USA Flag" />
             <p>Former Mr. Usa</p>
           </div>
         </div>
@@ -80,7 +84,7 @@ function HomeScreen() {
 
         <div className="bullet--block_wrapper">
           <div className="bullet--facts">
-            <Image src={Lift} />
+            <Image src={Lift} alt="Lift Ilustration" />
             <h5>Hard Work</h5>
             <p>
               <span className="primary-color-accent">The real secret</span> of
@@ -88,7 +92,7 @@ function HomeScreen() {
             </p>
           </div>
           <div className="bullet--facts">
-            <Image src={Health} />
+            <Image src={Health} alt="Heart Ilustration" />
             <h5>Healthy Nutrition</h5>
             <p>
               <span className="primary-color-accent">High powered</span> diets
@@ -96,7 +100,7 @@ function HomeScreen() {
             </p>
           </div>
           <div className="bullet--facts">
-            <Image src={Protein} />
+            <Image src={Protein} alt="Protein Ilustration" />
             <h5>Accountability</h5>
             <p>
               <span className="primary-color-accent">Support and advice</span>{" "}
