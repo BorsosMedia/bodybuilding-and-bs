@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import LSCoaching from "../media/services/lifestyle-coaching-min.png";
@@ -8,10 +7,8 @@ import MProgram from "../media/services/mass-program-min.png";
 import SProgram from "../media/services/shred-program-min.png";
 import NPlans from "../media/services/nutrition-plan-min.png";
 import Protocols from "../media/services/protocols-minB.png";
-
 function Services() {
   const [ActiveImage, setActiveImage] = useState("a");
-
   return (
     <div className="mn services--block mn">
       <h2 className="mn--title">This is What I Do</h2>
@@ -24,47 +21,45 @@ function Services() {
         Nationals. I continued my award-winning career moving on to become an
         IFBB Pro and winning the highly coveted Mr. USA title in 2014.
       </p>
-
       <div className="services--block__container">
         <ul className="services--grid">
           <li
-            className={ActiveImage == "a" && "active"}
+            className={ActiveImage == "a" ? "active" : undefined}
             onClick={() => setActiveImage("a")}
           >
             <span>Lifestyle Coaching</span>
-
             <Image src={LSCoaching} alt="" />
           </li>
           <li
-            className={ActiveImage == "b" && "active"}
+            className={ActiveImage == "b" ? "active" : undefined}
             onClick={() => setActiveImage("b")}
           >
             <span>Shred program</span>
             <Image src={SProgram} alt="" />
           </li>
           <li
-            className={ActiveImage == "c" && "active"}
+            className={ActiveImage == "c" ? "active" : undefined}
             onClick={() => setActiveImage("c")}
           >
             <span>Competition Prep</span>
             <Image src={CPrep} alt="" />
           </li>
           <li
-            className={ActiveImage == "d" && "active"}
+            className={ActiveImage == "d" ? "active" : undefined}
             onClick={() => setActiveImage("d")}
           >
             <span>Nutrition Plans</span>
             <Image src={NPlans} alt="" />
           </li>
           <li
-            className={ActiveImage == "e" && "active"}
+            className={ActiveImage == "e" ? "active" : undefined}
             onClick={() => setActiveImage("e")}
           >
             <span>Mass Program</span>
             <Image src={MProgram} alt="" />
           </li>
           <li
-            className={ActiveImage == "f" && "active"}
+            className={ActiveImage == "f" ? "active" : undefined}
             onClick={() => setActiveImage("f")}
           >
             <span>Protocols and more</span>
@@ -72,7 +67,7 @@ function Services() {
           </li>
         </ul>
         <ul className="services--img">
-          <li className={ActiveImage == "a" && "span--img-active"}>
+          <li className={ActiveImage == "a" ? "span--img-active" : undefined}>
             <Image src={LSCoaching} alt="" />
             <div>
               <p>
@@ -81,7 +76,7 @@ function Services() {
               </p>
             </div>
           </li>
-          <li className={ActiveImage == "b" && "span--img-active"}>
+          <li className={ActiveImage == "b" ? "span--img-active" : undefined}>
             <Image src={SProgram} alt="" />
             <div>
               <p>
@@ -90,7 +85,7 @@ function Services() {
               </p>
             </div>
           </li>
-          <li className={ActiveImage == "c" && "span--img-active"}>
+          <li className={ActiveImage == "c" ? "span--img-active" : undefined}>
             <Image src={CPrep} alt="" />
             <div>
               <p>
@@ -99,7 +94,7 @@ function Services() {
               </p>
             </div>
           </li>
-          <li className={ActiveImage == "d" && "span--img-active"}>
+          <li className={ActiveImage == "d" ? "span--img-active" : undefined}>
             <Image src={NPlans} alt="" />
             <div>
               <p>
@@ -108,7 +103,7 @@ function Services() {
               </p>
             </div>
           </li>
-          <li className={ActiveImage == "e" && "span--img-active"}>
+          <li className={ActiveImage == "e" ? "span--img-active" : undefined}>
             <Image src={MProgram} alt="" />
             <div>
               <p>
@@ -117,7 +112,7 @@ function Services() {
               </p>
             </div>
           </li>
-          <li className={ActiveImage == "f" && "span--img-active"}>
+          <li className={ActiveImage == "f" ? "span--img-active" : undefined}>
             <Image src={Protocols} alt="" />
             <div>
               <p>
@@ -132,5 +127,4 @@ function Services() {
     </div>
   );
 }
-
 export default Services;
