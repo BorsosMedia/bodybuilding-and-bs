@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { BsInstagram } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
@@ -7,7 +6,6 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { TbBrandTiktok } from "react-icons/tb";
 import RumbleLogo from "../media/rumble-logo.png";
 import Image from "next/image";
-
 const Footer = () => {
   return (
     <footer className="footer-container">
@@ -32,7 +30,7 @@ const Footer = () => {
           </a>
           <a href="https://rumble.com/user/bodybuildingandbs" target="_blank">
             <div className="icon-sm-container">
-              <Image src={RumbleLogo} className="icon-svg" alt="" />
+              <Image src={RumbleLogo} className="icon-svg" alt="Rumble Logo" />
             </div>
           </a>
         </div>
@@ -48,5 +46,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

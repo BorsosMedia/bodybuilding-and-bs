@@ -14,7 +14,7 @@ export const POST = async (req) => {
   const { checkout_token } = body;
   try {
     const transactionId = await axios.post(
-      process.env.API_URL,
+      process.env.NEXT_PUBLIC_API_URL,
       {
         transaction_id: checkout_token,
         order_id: "JKLM4321",
@@ -24,8 +24,8 @@ export const POST = async (req) => {
           "Content-Type": "application/json",
         },
         auth: {
-          username: process.env.PUBLIC_API_KEY,
-          password: process.env.PRIVATE_API_KEY,
+          username: process.env.NEXT_PUBLIC_PUBLIC_API_KEY,
+          password: process.env.NEXT_PUBLIC_PRIVATE_API_KEY,
         },
       }
     );

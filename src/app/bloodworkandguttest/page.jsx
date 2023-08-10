@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
@@ -9,7 +8,6 @@ import USflag from "../media/usflag.png";
 import IFBB from "../media/ifbb.png";
 import AffirmLogo from "../media/affirm-logo.webp";
 import { useLayoutEffect } from "react";
-
 function GutServiceScreen() {
   const [IsGutActive, setIsGutActive] = useState(false);
   const GutSection = useRef();
@@ -17,23 +15,18 @@ function GutServiceScreen() {
   const handleCTA = () => {
     GutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
   useEffect(() => {
     if (IsGutActive === true) {
       GutSection.current?.scrollIntoView({ behavior: "smooth" });
     }
     setIsGutActive(false);
   }, []);
-
-  /*  */
-
   useLayoutEffect(() => {
     window.scrollTo({
       top: 0,
     });
   }, []);
-
-  const baseUrl = process.env.BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   function HandleAffirmButton(name, price) {
     affirm.checkout({
       merchant: {
@@ -92,20 +85,21 @@ function GutServiceScreen() {
       tax_amount: 0,
       total: price,
     });
-
     affirm.checkout.open();
   }
-
   return (
     <>
       <main className="hero-section hero-section__gutwork">
         <div className="heroImg"></div>
-        {/*  <img src={Nick} className="nick-crop" alt="" /> */}
-        {/*  <img src={maskGroup} className="maskImg" alt="" /> */}
+
         <div className="hero-container">
           <div className="hero-text">
             <Link href="/">
-              <Image src={BBLogo} className="bbs--logo" alt="" />
+              <Image
+                src={BBLogo}
+                className="bbs--logo"
+                alt="Bodybuilding & BS logo"
+              />
             </Link>
             <h1 className="heading-text">
               Boost your <br />
@@ -118,11 +112,11 @@ function GutServiceScreen() {
         </div>
         <div className="hero__bullet-points">
           <div>
-            <Image src={IFBB} alt="" />
+            <Image src={IFBB} alt="IFBB Logo" />
             <p>IFBB Pro</p>
           </div>
           <div className="">
-            <Image src={USflag} alt="" />
+            <Image src={USflag} alt="US Flag" />
             <p>Former Mr. Usa</p>
           </div>
         </div>
@@ -142,7 +136,6 @@ function GutServiceScreen() {
           <div className="card-wrapper mn">
             <div className="card-container card-container--bloodwork">
               <h2 className="medium-text">Bloodwork</h2>
-
               <h4 className="card-text-price">$299</h4>
               <ul>
                 <li className="card-list">
@@ -174,7 +167,6 @@ function GutServiceScreen() {
                 </button>
               </a>
             </div>
-
             <div className="blood-gut-text">
               <p>
                 We use data about cholesterol and hormone levels, nutritional
@@ -190,7 +182,6 @@ function GutServiceScreen() {
                 in the United States. This service is available at an additional
                 fee.
               </p>
-              {/*  <img src={Blood} alt="" /> */}
             </div>
           </div>
           <div className="card-wrapper card-wrapper--gut mn">
@@ -213,7 +204,6 @@ function GutServiceScreen() {
               ref={GutSection}
             >
               <h2 className="medium-text">Gut Health Test</h2>
-
               <h4 className="card-text-price">$799</h4>
               <ul>
                 <li className="card-list">Test Analysis</li>
@@ -257,5 +247,4 @@ function GutServiceScreen() {
     </>
   );
 }
-
 export default GutServiceScreen;

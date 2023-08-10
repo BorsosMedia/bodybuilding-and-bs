@@ -1,11 +1,9 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import GutEnzime from "../media/gut-enzime.jpg";
 import GutMicrobiome from "../media/gut-microbiome.jpg";
 import GutBacteria from "../media/gut-bacteria.jpg";
-
 function GutSection({ IsGutActive, setIsGutActive }) {
   const HandleGutButton = () => {
     setIsGutActive(true);
@@ -22,14 +20,11 @@ function GutSection({ IsGutActive, setIsGutActive }) {
         function. Knowing about your composition will help me adjust your diet
         to optimize your nutrition.
       </p>
-      {/* <p className="text--white">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-        maximus vel orci a tristique.
-      </p> */}
+
       <div className="gut-section--container">
-        <Image src={GutEnzime} alt="" />
-        <Image src={GutMicrobiome} alt="" />
-        <Image src={GutBacteria} alt="" />
+        <Image src={GutEnzime} alt="Enzime Example" />
+        <Image src={GutMicrobiome} alt="Microbiome Example" />
+        <Image src={GutBacteria} alt="Gut Bacteria" />
       </div>
       <Link href="/bloodworkandguttest">
         <button className="button" onClick={HandleGutButton}>
@@ -39,5 +34,4 @@ function GutSection({ IsGutActive, setIsGutActive }) {
     </div>
   );
 }
-
 export default GutSection;

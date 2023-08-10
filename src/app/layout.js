@@ -15,37 +15,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/icon.ico" />
-        {/* <link
-          rel="preload"
-          href="/media/fonts/Robinson-Regular.woff2"
-          as="Robinson Regular"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/media/fonts/calibri-regular.woff2"
-          as="Calibri"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/media/fonts/Robinson-Rough.woff2"
-          as="Robinson Rough"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/media/fonts/BigShouldersDisplay-Light.woff2"
-          as="Big Shoulders Light"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/media/fonts/BigShouldersDisplay-Regular.woff2"
-          as="Big Shoulders Regular"
-          crossOrigin="anonymous"
-        /> */}
-        <link href="./fonts.css" rel="stylesheet" type="text/css" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-QQG4XG8LJG"

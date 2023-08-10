@@ -7,7 +7,7 @@ import AffirmLogo from "../media/affirm-logo.webp";
 import Image from "next/image";
 
 const NormalPlans = ({ TypeOfPlan }) => {
-  const baseUrl = process.env.BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   function HandleAffirmButton() {
     useEffect;
     affirm.checkout({

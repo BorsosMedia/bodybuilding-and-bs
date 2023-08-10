@@ -1,6 +1,8 @@
+"use client";
+
 _affirm_config = {
-  public_api_key: "VGOCPKS82RVITC0M",
-  script: "https://cdn1-sandbox.affirm.com/js/v2/affirm.js",
+  public_api_key: process.env.NEXT_PUBLIC_PUBLIC_API_KEY,
+  script: process.env.NEXT_PUBLIC_AFFIRMJS_API_URL,
 };
 (function (m, g, n, d, a, e, h, c) {
   var b = m[n] || {},

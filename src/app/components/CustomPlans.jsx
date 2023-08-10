@@ -5,7 +5,7 @@ import AffirmLogo from "../media/affirm-logo.webp";
 import Image from "next/image";
 
 function CustomPlans() {
-  const baseUrl = process.env.BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   function HandleAffirmButton(name, price) {
     affirm.checkout({
       merchant: {
