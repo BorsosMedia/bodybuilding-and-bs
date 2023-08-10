@@ -2,6 +2,8 @@
 
 import "./global.css";
 import "./fonts.css";
+import gtm1 from "./gtm-1.js";
+import gtm2 from "./gtm-2.js";
 import affirm from "./affirm.js";
 import Footer from "./components/Footer";
 
@@ -20,6 +22,8 @@ export default function RootLayout({ children }) {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-QQG4XG8LJG"
         ></script>
+        <script src={gtm1}></script>
+        <script src={gtm2}></script>
         <script src={affirm}></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
@@ -36,7 +40,6 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </div>
-        <script type="module" src="/src/main.jsx"></script>
       </body>
     </html>
   );
