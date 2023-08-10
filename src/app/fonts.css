@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+@font-face {
+  font-family: Robinson Regular;
+  src: url("media/fonts/Robinson-Regular.woff2") format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Calibri;
+  src: url("media/fonts/calibri-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Robinson Rough;
+  src: url("media/fonts/Robinson-Rough.woff2") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Big Shoulders Light;
+  src: url("media/fonts/BigShouldersDisplay-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: Big Shoulders Regular;
+  src: url("media/fonts/BigShouldersDisplay-Regular.woff2") format("woff2");
+}
