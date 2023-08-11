@@ -266,7 +266,9 @@ const NormalPlans = ({ TypeOfPlan }) => {
           <li className="card-list">Flexible and Frequent Check-Ins</li>
           <li className="card-list">Tailored Training and Nutrition Plans</li>
           <li className="card-list">Cutting-Edge PED Programming</li>
-          <li className="card-list">Health Monitoring Through PEDs</li>
+          <li className="card-list">
+            Health Monitoring Through PEDs (Only If Used)
+          </li>
           <li
             className={
               TypeOfPlan === "a" ? "card-list " : "card-list card-list-hidden"
