@@ -674,7 +674,7 @@ a {
 }
 
 .inquiry--block {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
