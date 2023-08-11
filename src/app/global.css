@@ -2076,7 +2076,7 @@ option {
     height: 36.25rem;
     width: auto;
     margin-left: auto;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
   }
   .discord--text {
