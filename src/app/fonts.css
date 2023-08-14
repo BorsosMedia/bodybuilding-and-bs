@@ -6,8 +6,8 @@
     format("woff2");
   font-weight: bold;
 }
-/*
-@font-face {
+
+/* @font-face {
   font-family: "Robinson Regular";
   src: url("https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/Robinson-Regular.woff2")
     format("woff2");
@@ -18,9 +18,8 @@
   src: url("https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/Robinson-Rough.woff2")
     format("woff2");
   font-weight: bold;
-}
+} */
 
- */
 @font-face {
   font-family: "Big Shoulders Display Light";
   src: url("https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/BigShouldersDisplay-Light.woff2")
