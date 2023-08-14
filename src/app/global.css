@@ -49,9 +49,10 @@ h4,
 h5,
 h6,
 button {
-  font-family: Robinson Rough !important;
+  font-family: Robinson Rough, Helvetica, sans-serif !important;
   letter-spacing: 2px;
   line-height: 82.5%;
+  font-weight: 500 !important;
 }
 
 h1 {
@@ -78,7 +79,7 @@ h6 {
 
 p,
 li {
-  font-family: Big Shoulders Light;
+  font-family: Big Shoulders Display Light;
   letter-spacing: 0.5px;
   font-size: 1.1rem;
 }
@@ -511,7 +512,7 @@ a {
 }
 
 .blood-gut-text {
-  font-family: Big Shoulder Regular;
+  font-family: BigShouldersDisplay Regular;
   color: var(--white-color);
   display: flex;
   flex-direction: column;
@@ -604,7 +605,7 @@ a {
 }
 
 .work--block__text p {
-  font-family: Big Shoulders Regular;
+  font-family: Big Shoulders Display Regular;
   color: var(--black-color);
 }
 .work--block__text .button {
@@ -643,7 +644,7 @@ a {
   color: var(--black-color);
 }
 .inquiry--block p {
-  font-family: Big Shoulders Regular;
+  font-family: Big Shoulders Display Regular;
   max-width: calc(var(--text-max-width) + 1rem);
   margin-inline: auto;
 }
@@ -713,7 +714,7 @@ body .hl-app .form-builder--wrap {
 }
 
 .hl-app #_builder-form input[type="email"] {
-  font-family: Big Shoulders Regular !important;
+  font-family: Big Shoulders Display Regular !important;
 }
 
 /*  */
@@ -1081,7 +1082,7 @@ body .hl-app .form-builder--wrap {
   color: var(--white-color);
   margin-top: 0.5rem;
   text-align: center;
-  font-family: Big Shoulders Regular;
+  font-family: Big Shoulders Display Regular;
   font-weight: 400;
 }
 
@@ -1312,7 +1313,7 @@ body .hl-app .form-builder--wrap {
   display: block;
 }
 .button.button--cta {
-  font-family: Big Shoulders Regular !important;
+  font-family: Big Shoulders Display Regular !important;
   font-weight: 600;
   letter-spacing: 0.5px;
   font-size: 1.2rem !important;
@@ -1320,7 +1321,7 @@ body .hl-app .form-builder--wrap {
 .card-container .button:not(.button--affirm) {
   color: var(--black-color);
   background-color: var(--white-color);
-  font-family: Big Shoulders Regular !important;
+  font-family: Big Shoulders Display Regular !important;
   font-weight: 600;
   letter-spacing: 0.5px;
   font-size: 1.2rem !important;
@@ -1417,7 +1418,7 @@ black-friday-wrapper {
 .discount__total {
   width: 202.08px;
   transform: translateY(1rem);
-  font-family: Big Shoulders Regular;
+  font-family: Big Shoulders Display Regular;
   display: block;
   position: relative;
   font-size: 1.2rem;
@@ -1443,7 +1444,7 @@ black-friday-wrapper {
 }
 .card-container .card-list {
   color: var(--black-color);
-  font-family: Big Shoulders Regular;
+  font-family: Big Shoulders Display Regular;
 }
 .price-description {
   font-size: 1.2rem !important;
@@ -2259,7 +2260,7 @@ option {
     display: grid;
     place-content: center;
     text-align: center;
-    font-family: Big Shoulders Display;
+    font-family: Big Shoulders Display Regular;
     gap: 1rem;
   }
   .results--page .button {

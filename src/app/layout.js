@@ -16,10 +16,39 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/icon.ico" />
+        <link
+          rel="preload"
+          href="https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/Robinson-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin
+        />
+        <link
+          rel="preload"
+          href="https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/Robinson-Rough.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin
+        />
+        <link
+          rel="preload"
+          href="https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/BigShouldersDisplay-Light.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin
+        />
+        <link
+          rel="preload"
+          href="https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/BigShouldersDisplay-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin
+        />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-QQG4XG8LJG"
         ></script>
+
         <script src={gtm1}></script>
         <script src={gtm2}></script>
         <script src={affirm}></script>
