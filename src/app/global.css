@@ -52,7 +52,6 @@ button {
   font-family: Robinson Rough, Helvetica, sans-serif !important;
   letter-spacing: 2px;
   line-height: 82.5%;
-  font-weight: 500 !important;
 }
 
 h1 {
@@ -605,7 +604,7 @@ a {
 }
 
 .work--block__text p {
-  font-family: Big Shoulders Display Regular ;
+  font-family: Big Shoulders Display Regular;
   color: var(--black-color);
 }
 .work--block__text .button {
