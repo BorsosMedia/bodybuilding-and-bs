@@ -155,7 +155,13 @@ body
 }
 
 /*  */
-
+.IG--block__wrapper {
+  margin-top: 4rem;
+}
+.google-reviews-wrapper {
+  max-width: 983px !important;
+  margin-inline: auto;
+}
 .pricing-container .paragraph-text,
 .pricing-container .big-text:not(.bg__text--background .big-text),
 .plan-toggle,
