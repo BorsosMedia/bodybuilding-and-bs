@@ -605,7 +605,7 @@ a {
 }
 
 .work--block__text p {
-  font-family: Big Shoulders Display Regular;
+  font-family: Big Shoulders Display Regular ;
   color: var(--black-color);
 }
 .work--block__text .button {
