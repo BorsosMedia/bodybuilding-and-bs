@@ -8,7 +8,7 @@ function Bloodwork() {
   return (
     <div className="blood-work--block mn">
       <div className="work--block__img">
-        <Image src={Blood} />
+        <Image src={Blood} alt="blood sample" />
       </div>
       <div className="work--block__text">
         <h3>

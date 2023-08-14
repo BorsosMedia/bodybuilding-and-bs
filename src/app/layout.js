@@ -21,28 +21,28 @@ export default function RootLayout({ children }) {
           href="https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/Robinson-Regular.woff2"
           as="font"
           type="font/woff2"
-          crossorigin
+          crossOrigin="true"
         />
         <link
           rel="preload"
           href="https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/Robinson-Rough.woff2"
           as="font"
           type="font/woff2"
-          crossorigin
+          crossOrigin="true"
         />
         <link
           rel="preload"
           href="https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/BigShouldersDisplay-Light.woff2"
           as="font"
           type="font/woff2"
-          crossorigin
+          crossOrigin="true"
         />
         <link
           rel="preload"
           href="https://cdn.apisystem.tech/memberships/atck3bt1c4mTHgI43YQm/post-materials/3035d014-e5ab-48d7-92c9-de0c3be8053b/BigShouldersDisplay-Regular.woff2"
           as="font"
           type="font/woff2"
-          crossorigin
+          crossOrigin="true"
         />
         <script
           async
@@ -53,6 +53,7 @@ export default function RootLayout({ children }) {
         <script src={gtm2}></script>
         <script src={affirm}></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#eded00" />
       </head>
       <body>
         <noscript>
