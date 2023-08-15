@@ -584,7 +584,7 @@ a {
 
 /* Bloodwork */
 .blood-work--block {
-  background: url("./media/brushh-mobile2.png");
+  background: url("./media/brushh-mobile2.webp");
   background-size: 100% 100%;
   background-position: center;
   padding: 2rem 4rem;
@@ -1155,7 +1155,7 @@ body .hl-app .form-builder--wrap {
   cursor: pointer;
 }
 #root {
-  background: url("./media/lg--bg.jpg");
+  background: url("./media/lg--bg.webp");
   background-size: 100%;
   background-position: center;
   background-color: var(--background-color);
@@ -2041,7 +2041,7 @@ option {
   }
 
   .blood-work--block {
-    background: url("./media/brushh.png");
+    background: url("./media/brushh.webp");
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-size: 119px 564px;

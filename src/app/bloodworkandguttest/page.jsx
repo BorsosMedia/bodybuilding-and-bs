@@ -3,11 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import BBLogo from "../media/BBLogo.png";
+import BBLogo from "../media/BBLogo.webp";
 import USflag from "../media/usflag.png";
 import IFBB from "../media/ifbb.png";
 import AffirmLogo from "../media/affirm-logo.webp";
 import { useLayoutEffect } from "react";
+
 function GutServiceScreen() {
   const [IsGutActive, setIsGutActive] = useState(false);
   const GutSection = useRef();

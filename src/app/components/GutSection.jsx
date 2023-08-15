@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import GutEnzime from "../media/gut-enzime.jpg";
-import GutMicrobiome from "../media/gut-microbiome.jpg";
-import GutBacteria from "../media/gut-bacteria.jpg";
+import GutEnzime from "../media/gut-enzime.webp";
+import GutMicrobiome from "../media/gut-microbiome.webp";
+import GutBacteria from "../media/gut-bacteria.webp";
 function GutSection({ IsGutActive, setIsGutActive }) {
   const HandleGutButton = () => {
     setIsGutActive(true);

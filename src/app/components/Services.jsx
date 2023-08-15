@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import LSCoaching from "../media/services/lifestyle-coaching-min.png";
-import CPrep from "../media/services/competition-prep-min.png";
-import MProgram from "../media/services/mass-program-min.png";
-import SProgram from "../media/services/shred-program-min.png";
-import NPlans from "../media/services/nutrition-plan-min.png";
-import Protocols from "../media/services/protocols-minB.png";
+import LSCoaching from "../media/services/lifestyle-coaching-min.webp";
+import CPrep from "../media/services/competition-prep-min.webp";
+import MProgram from "../media/services/mass-program-min.webp";
+import SProgram from "../media/services/shred-program-min.webp";
+import NPlans from "../media/services/nutrition-plan-min.webp";
+import Protocols from "../media/services/protocols-minB.webp";
 function Services() {
   const [ActiveImage, setActiveImage] = useState("a");
   return (

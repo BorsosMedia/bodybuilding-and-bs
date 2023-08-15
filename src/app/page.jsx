@@ -3,8 +3,8 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Nick from "./media/nick.png";
-import BBLogo from "./media/BBLogo.png";
+import Nick from "./media/nick.webp";
+import BBLogo from "./media/BBLogo.webp";
 import USflag from "./media/usflag.png";
 import IFBB from "./media/ifbb.png";
 import Lift from "./media/lift.svg";
