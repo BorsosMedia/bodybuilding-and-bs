@@ -369,6 +369,7 @@ a {
   letter-spacing: initial;
   display: flex;
   align-items: center;
+  font-weight: 500 !important;
 }
 .button.button--affirm .img--afirm {
   width: auto;
