@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { TbShoppingCart } from "react-icons/tb";
-import { FiChevronDown } from "react-icons/fi";
+
 import AffirmLogo from "../media/affirm-logo.webp";
 import Image from "next/image";
 
@@ -67,17 +67,13 @@ const NormalPlans = ({ TypeOfPlan }) => {
           unit_price: (() => {
             switch (TypeOfPlan) {
               case "a":
-                return 39900;
+                return 29500;
               case "b":
-                return 79900;
-              case "c":
-                return 149900;
+                return 79650;
               case "d":
-                return 149900;
+                return 150450;
               case "e":
-                return 239900;
-              default:
-                return 10000;
+                return 283200;
             }
           })(),
           qty: 1,
@@ -94,17 +90,13 @@ const NormalPlans = ({ TypeOfPlan }) => {
       total: (() => {
         switch (TypeOfPlan) {
           case "a":
-            return 39900;
+            return 29500;
           case "b":
-            return 79900;
-          case "c":
-            return 149900;
+            return 79650;
           case "d":
-            return 149900;
+            return 150450;
           case "e":
-            return 239900;
-          default:
-            return 10000;
+            return 283200;
         }
       })(),
     });
@@ -198,20 +190,20 @@ const NormalPlans = ({ TypeOfPlan }) => {
             case "b":
               return (
                 <p className="discount__total">
-                  <span>Before $975.00</span>
+                  <span>Before $885.00</span>
                 </p>
               );
 
             case "d":
               return (
                 <p className="discount__total">
-                  <span>Before $1950.00</span>
+                  <span>Before $1770.00</span>
                 </p>
               );
             case "e":
               return (
                 <p className="discount__total">
-                  <span>Before $3900.00</span>
+                  <span>Before $3540.00</span>
                 </p>
               );
           }
@@ -223,26 +215,26 @@ const NormalPlans = ({ TypeOfPlan }) => {
               case "a":
                 return (
                   <span>
-                    $325.<span>00</span>
+                    $295.<span>00</span>
                   </span>
                 );
               case "b":
                 return (
                   <span>
-                    $877.<span>50</span>
+                    $796.<span>50</span>
                   </span>
                 );
 
               case "d":
                 return (
                   <span>
-                    $1657.<span>50</span>
+                    $1504.<span>50</span>
                   </span>
                 );
               case "e":
                 return (
                   <span>
-                    $3120.<span>00</span>
+                    $2832.<span>00</span>
                   </span>
                 );
             }

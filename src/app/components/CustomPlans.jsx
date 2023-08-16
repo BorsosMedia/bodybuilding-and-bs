@@ -81,7 +81,7 @@ function CustomPlans() {
         <div className="plan--block__container">
           <h3>3-month bulking plan</h3>
           <p>Get bigger, stronger, and more powerful than you ever have.</p>
-          <h4>$499</h4>
+          <h4>$299</h4>
           <ul>
             <li>Specialized Diet</li>
             <li>Training Routine</li>
@@ -95,7 +95,7 @@ function CustomPlans() {
               <button
                 className="button button--affirm"
                 onClick={() =>
-                  HandleAffirmButton("3-month bulking plan", 49900)
+                  HandleAffirmButton("3-month bulking plan", 29900)
                 }
               >
                 Pay with
@@ -122,7 +122,7 @@ function CustomPlans() {
             Time to build yourself up. Get in top shape for contests and catch
             the attention of everybody everywhere.
           </p>
-          <h4>$499</h4>
+          <h4>$299</h4>
           <ul>
             <li>Specialized Diet</li>
             <li>Training Routine</li>
@@ -136,7 +136,7 @@ function CustomPlans() {
               <button
                 className="button button--affirm"
                 onClick={() =>
-                  HandleAffirmButton("3-month shredding plan", 49900)
+                  HandleAffirmButton("3-month shredding plan", 29900)
                 }
               >
                 Pay with
@@ -162,7 +162,7 @@ function CustomPlans() {
             Building muscle and getting stronger while burning body fat is
             possible, you just need the right plan.
           </p>
-          <h4>$499</h4>
+          <h4>$299</h4>
           <ul>
             <li>Specialized Diet</li>
             <li>Training Routine</li>
@@ -176,7 +176,7 @@ function CustomPlans() {
               <button
                 className="button button--affirm"
                 onClick={() =>
-                  HandleAffirmButton("3-month body recomposition plan", 49900)
+                  HandleAffirmButton("3-month body recomposition plan", 29900)
                 }
               >
                 Pay with

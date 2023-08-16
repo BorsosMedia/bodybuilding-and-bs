@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body:hover::-webkit-scrollbar-thumb {
-  background: #eded00;
+  background: #d6d607;
 }
 
 :root {
