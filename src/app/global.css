@@ -255,7 +255,8 @@ ul {
 }
 
 .button--secondary:hover .icon,
-.discord--block .button:hover .icon {
+.discord--block .button:hover .icon,
+.inquiry--wrapper.consultation--wrapper .button:hover .icon {
   transform: rotate(45deg);
 }
 .button.button__black {
@@ -629,6 +630,27 @@ a {
   margin-inline: 1rem !important;
 } */
 
+/* consultation Box  */
+.inquiry--wrapper.consultation--wrapper {
+  background: url("media/central-layer.png");
+}
+.inquiry--wrapper.consultation--wrapper .inquiry--block {
+  background: url(./media/Icons/phone.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 2rem 1rem;
+}
+.inquiry--wrapper.consultation--wrapper .button {
+  margin-inline: auto;
+  color: var(--primary-color);
+  background-color: var(--black-color);
+  margin-top: 0;
+  max-width: 13.06rem;
+}
+
+/*  */
+
 /* Inquiry Message */
 .inquiry--wrapper {
   background-color: var(--primary-color);
@@ -648,7 +670,7 @@ a {
   max-width: calc(var(--text-max-width) + 1rem);
   margin-inline: auto;
 }
-.inquiry--wrapper::before {
+.consultation--wrapper.inquiry--wrapper::before {
   content: "";
   background: url("./media/top-layer.png");
   position: absolute;
@@ -660,7 +682,7 @@ a {
   background-size: contain;
   background-repeat: repeat-x;
 }
-.inquiry--wrapper::after {
+.consultation--wrapper.inquiry--wrapper::after {
   content: "";
   background: url("./media/bottom-layer.png");
   position: absolute;

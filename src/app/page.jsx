@@ -21,6 +21,7 @@ import GoogleReviews from "./components/GoogleReviews";
 import InstagramWidget from "./components/InstagramWidget";
 import GutSection from "./components/GutSection";
 import { useLayoutEffect } from "react";
+import ConsultationBox from "./components/ConsultationBox";
 
 function HomeScreen() {
   const [IsGutActive, setIsGutActive] = useState(false);
@@ -169,8 +170,9 @@ function HomeScreen() {
         </div>
 
         <NormalPlans TypeOfPlan={TypeOfPlan} />
-        <InquiryMessage />
+        <ConsultationBox />
         <CustomPlans />
+        <InquiryMessage />
         <Bloodwork />
         <GutSection IsGutActive={IsGutActive} setIsGutActive={setIsGutActive} />
         <Services />
