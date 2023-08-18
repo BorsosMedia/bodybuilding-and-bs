@@ -21,24 +21,22 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-QQG4XG8LJG"
         ></script>
 
-        <script></script>
-
         <script src={gtm1}></script>
         <script src={gtm2}></script>
         <script src={affirm}></script>
-        <script src={pixel}></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#eded00" />
       </head>
       <body>
-        <noscript>
+        {/*        <noscript>
           <img
             height="1"
             width="1"
             style="display:none"
             src="https://www.facebook.com/tr?id=819676513021429&ev=PageView&noscript=1"
           />
-        </noscript>
+        </noscript> */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MQCGDF6W"

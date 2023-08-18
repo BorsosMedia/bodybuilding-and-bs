@@ -165,7 +165,6 @@ body
 .pricing-container .paragraph-text,
 .pricing-container .big-text:not(.bg__text--background .big-text),
 .plan-toggle,
-.bullet--block_wrapper,
 .mn {
   padding-inline: 1rem;
   max-width: var(--width-wrapper);
@@ -1853,8 +1852,8 @@ option {
 
 @media only screen and (min-width: 750px) {
   .bullet--block_wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-    width: var(--width-wrapper);
+    grid-template-columns: 1fr 1fr;
+    /*     width: calc(var(--width-wrapper) + 4rem); */
     margin: 2.5rem auto 4rem auto;
     justify-items: baseline;
   }
@@ -1876,6 +1875,9 @@ option {
     max-width: var(--text-max-width);
     margin-inline: auto;
   } */
+  .bullet--block_wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   .faq--block {
     max-width: 100%;
     margin-inline: initial;

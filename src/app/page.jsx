@@ -9,8 +9,9 @@ import USflag from "./media/usflag.png";
 import IFBB from "./media/ifbb.png";
 import Lift from "./media/lift.svg";
 import Health from "./media/health.svg";
-import Protein from "./media/protein.svg";
 import PaintStroke from "./media/PaintStroke.png";
+import Protein from "./media/protein.svg";
+import Earth from "./media/earth.svg";
 import NormalPlans from "./components/NormalPlans";
 import CustomPlans from "./components/CustomPlans";
 import DiscordSection from "./components/DiscordSection";
@@ -64,7 +65,7 @@ function HomeScreen() {
             <Image src={IFBB} alt="IFBB Logo" />
             <p>IFBB Pro</p>
           </div>
-          <div className="">
+          <div>
             <Image src={USflag} alt="USA Flag" />
             <p>Former Mr. Usa</p>
           </div>
@@ -106,6 +107,14 @@ function HomeScreen() {
             <p>
               <span className="primary-color-accent">Support and advice</span>{" "}
               to keep you on track
+            </p>
+          </div>
+          <div className="bullet--facts">
+            <Image src={Earth} alt="Protein Ilustration" />
+            <h5>Global Service</h5>
+            <p>
+              <span className="primary-color-accent">Helping</span> people
+              across the world
             </p>
           </div>
         </div>
