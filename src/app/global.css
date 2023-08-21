@@ -162,7 +162,6 @@ body
   max-width: 983px !important;
   margin-inline: auto;
 }
-.pricing-container .paragraph-text,
 .pricing-container .big-text:not(.bg__text--background .big-text),
 .plan-toggle,
 .mn {
@@ -170,7 +169,10 @@ body
   max-width: var(--width-wrapper);
   margin-inline: auto;
 }
-
+.hero-paragraph {
+  margin: 0 auto;
+  max-width: var(--width-wrapper);
+}
 ul {
   margin-left: 1.5rem;
   gap: 0.5rem;
@@ -2270,7 +2272,7 @@ option {
   }
   .hero-paragraph {
     margin: 0 auto;
-    width: var(--width-wrapper);
+    max-width: calc(var(--width-wrapper) + 8rem);
   }
   .pricing-container .paragraph-text {
     text-align: left;
