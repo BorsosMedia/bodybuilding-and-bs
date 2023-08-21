@@ -261,20 +261,7 @@ const NormalPlans = ({ TypeOfPlan }) => {
           <li className="card-list">
             Health Monitoring Through PEDs (Only If Used)
           </li>
-          <li
-            className={
-              TypeOfPlan === "a" ? "card-list " : "card-list card-list-hidden"
-            }
-          >
-            No Initial Phone Consultation
-          </li>
-          <li
-            className={
-              TypeOfPlan === "a" ? "card-list card-list-hidden" : "card-list "
-            }
-          >
-            Includes Initial Phone Consultation
-          </li>
+          <li className="card-list">Includes Initial Phone Consultation</li>
         </ul>
         <a
           target="_blank"
