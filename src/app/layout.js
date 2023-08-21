@@ -3,7 +3,7 @@ import "./fonts.css";
 import gtm1 from "./gtm-1.js";
 import gtm2 from "./gtm-2.js";
 import affirm from "./affirm.js";
-import pixel from "./pixel.js";
+import metaPixel from "./metaPixel.js";
 import Footer from "./components/Footer";
 
 export const metadata = {
@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           async
@@ -24,19 +24,21 @@ export default function RootLayout({ children }) {
         <script src={gtm1}></script>
         <script src={gtm2}></script>
         <script src={affirm}></script>
+        <script src={metaPixel}></script>
+
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=819676513021429&ev=PageView&noscript=1"
+          />
+        </noscript>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#eded00" />
       </head>
       <body>
-        {/*        <noscript>
-          <img
-            height="1"
-            width="1"
-            style="display:none"
-            src="https://www.facebook.com/tr?id=819676513021429&ev=PageView&noscript=1"
-          />
-        </noscript> */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MQCGDF6W"
