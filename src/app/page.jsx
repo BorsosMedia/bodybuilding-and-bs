@@ -23,6 +23,9 @@ import InstagramWidget from "./components/InstagramWidget";
 import GutSection from "./components/GutSection";
 import { useLayoutEffect } from "react";
 import ConsultationBox from "./components/ConsultationBox";
+import BeforeAfterMobile from "./media/before-after-mobile.png";
+import BeforeAfter from "./media/before-after.png";
+import WhatsappWidget from "./components/WhatsappWidget";
 
 function HomeScreen() {
   const [IsGutActive, setIsGutActive] = useState(false);
@@ -39,9 +42,6 @@ function HomeScreen() {
   return (
     <>
       <main className="hero-section">
-        <div className="heroImg"></div>
-        <Image src={Nick} className="nick-crop" alt="Nick" />
-
         <div className="hero-container">
           <div className="hero-text">
             <Link href="/">
@@ -53,12 +53,35 @@ function HomeScreen() {
             </Link>
             <h1 className="heading-text">
               Become The Best <br />
-              Version Of Yourself
+              <span className="primary-color-accent">Version Of Yourself</span>
             </h1>
-            <button onClick={handleCTA} className="button button--robinson">
-              Get started
-            </button>
+            <div className="opt-in_form">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/8wn9O7uE0Ss3tL5ILlcS"
+                style={{
+                  width: "100%",
+
+                  border: "none",
+                }}
+                id="inline-8wn9O7uE0Ss3tL5ILlcS"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Opt-in Box"
+                data-height="429"
+                data-layout-iframe-id="inline-8wn9O7uE0Ss3tL5ILlcS"
+                data-form-id="8wn9O7uE0Ss3tL5ILlcS"
+                title="Opt-in Box"
+              ></iframe>
+              <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            </div>
           </div>
+          {/* <Image src={Nick} className="nick-crop" alt="Nick" /> */}
+          <div className="nick-hero_img"></div>
         </div>
         <div className="hero__bullet-points">
           <div>
@@ -83,7 +106,6 @@ function HomeScreen() {
           Mr. USA, I've gained enough experience to help you achieve your
           fitness goals and change your life through:
         </p>
-
         <div className="bullet--block_wrapper">
           <div className="bullet--facts">
             <Image src={Lift} alt="Lift Ilustration" />
@@ -117,6 +139,27 @@ function HomeScreen() {
               across the world
             </p>
           </div>
+        </div>
+        <div className="nick_welcome-frame">
+          <iframe
+            src="https://player.vimeo.com/video/862456602?h=9e1487f53a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            /*          frameBorder="0" */
+            allow="autoplay; fullscreen; picture-in-picture"
+            title="COACHING.BODYBUILDINGANDBS.COM"
+            className="iframe_video"
+          ></iframe>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        <div className="before_after-section">
+          <h2>
+            Before /<span className="primary-color-accent">/ After</span>
+          </h2>
+          <Image
+            src={BeforeAfterMobile}
+            alt="Before and After"
+            className="before_after-img-mobile"
+          />
+          <Image src={BeforeAfter} alt="" className="before_after-img" />
         </div>
 
         <h2 className="big-text big-text__white" ref={ref}>
@@ -177,7 +220,6 @@ function HomeScreen() {
         <h4 className="medium-text">Contest Prep </h4>
       </div> */}
         </div>
-
         <NormalPlans TypeOfPlan={TypeOfPlan} />
         <ConsultationBox />
         <CustomPlans />
@@ -188,6 +230,7 @@ function HomeScreen() {
         <DiscordSection />
         <GoogleReviews />
         <InstagramWidget />
+        <WhatsappWidget />
       </section>
     </>
   );

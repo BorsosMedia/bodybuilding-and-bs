@@ -123,6 +123,32 @@ body
   margin: 2rem auto !important;
 }
 
+/* Iframe video */
+
+.nick_welcome-frame {
+  width: 100%;
+  max-width: 854px;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.iframe_video {
+  max-width: 100%;
+  margin-inline: auto;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  overflow: hidden;
+  outline: 0.5rem solid var(--primary-color);
+}
+
+/*  */
+
 /* Gut Home Section */
 .gut--section-wrapper {
   margin: 2rem auto;
@@ -194,7 +220,7 @@ ul {
   display: grid;
 
   gap: 2rem;
-  margin: 2rem 1rem 4rem 1rem;
+  margin: 2rem 1rem 2rem 1rem;
   justify-items: left;
   width: min-content;
   margin-inline: auto;
@@ -216,6 +242,28 @@ ul {
   margin: auto;
 }
 
+/*  */
+
+.before_after-section {
+  color: var(--white-color);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.before_after-img-mobile {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 550px;
+  margin: 1rem auto;
+}
+.before_after-img {
+  display: none;
+}
+
+/*  */
 .bullet--facts p {
   grid-column: -1/1;
   letter-spacing: 0.8px;
@@ -746,14 +794,16 @@ body .hl-app .form-builder--wrap {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 90svh;
-  min-height: 90vh;
-  max-height: max(800px, 90svh);
+  min-height: 95svh;
+  min-height: 95vh;
+  max-height: max(850px, 95svh);
   overflow: hidden;
   position: relative;
   -webkit-clip-path: polygon(50% 100%, 100% 98%, 100% 0, 0 0, 0 959%);
   clip-path: polygon(50% 100%, 100% 98%, 100% 0, 0 0, 0 98%);
+  display: grid;
 }
+
 .hero-section::before {
   content: "";
   position: absolute;
@@ -775,6 +825,15 @@ body .hl-app .form-builder--wrap {
   height: 1rem;
   background-color: var(--primary-color);
   z-index: 4;
+}
+
+.nick-hero_img {
+  background: url(./media/nick.webp);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
 }
 /* .hero-section::after {
   content: "";
@@ -811,8 +870,8 @@ body .hl-app .form-builder--wrap {
   height: 100%;
   object-position: right;
   object-fit: cover;
-  position: absolute;
-  inset: 0;
+  /*   position: absolute;
+  inset: 0; */
   background: linear-gradient(
     0deg,
     rgba(21, 21, 21, 0.7) 0%,
@@ -833,13 +892,14 @@ body .hl-app .form-builder--wrap {
 } */
 
 .nick-crop {
+  width: 100%;
   height: 100%;
-  width: auto;
-  position: absolute;
+  object-fit: cover;
+  /*   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 2;
-  transform: translate(30%, 0);
+  transform: translate(30%, 0); */
 }
 
 .maskImg {
@@ -1009,20 +1069,30 @@ body .hl-app .form-builder--wrap {
 }
 
 .hero-container {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  align-items: center;
+  display: grid;
+  align-items: end;
+  height: 100%;
+  grid-template-rows: 1fr 400px;
+  padding: 1rem 0;
+  /*   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   width: 100%;
-  z-index: 3;
 }
 
 .hero-text {
   padding: 0 1rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero-text h1 {
+  margin-bottom: 1rem;
+  text-align: center !important;
 }
 .hero-section.hero-section__gutwork {
   min-height: 70svh;
@@ -1174,7 +1244,7 @@ body .hl-app .form-builder--wrap {
   width: auto;
   height: 6rem;
   margin-bottom: 0.5rem;
-  margin-right: auto;
+  margin-inline: auto;
   cursor: pointer;
 }
 #root {
@@ -1191,6 +1261,10 @@ body .hl-app .form-builder--wrap {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.pricing-container:nth-of-type(1) .paragraph-text {
+  padding-inline: 1rem;
 }
 .gut--service__block .card-wrapper:nth-of-type(1) {
   margin-bottom: 4rem !important;
@@ -1218,7 +1292,6 @@ body .hl-app .form-builder--wrap {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
 }
 .bg__text--background img {
   height: 136px;
@@ -1823,9 +1896,9 @@ option {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  display: flex;
   gap: 2rem;
   z-index: 3;
+  display: none;
 }
 
 .hero__bullet-points > div {
@@ -1853,17 +1926,45 @@ option {
 }
 
 @media only screen and (min-width: 750px) {
+  .nick-hero_img {
+    background-position: 50% 0;
+  }
+
+  .hero__bullet-points {
+    display: flex;
+  }
+  .before_after-section {
+    margin-bottom: 2rem;
+  }
+  .nick_welcome-frame {
+    margin-bottom: 4rem;
+  }
   .bullet--block_wrapper {
     grid-template-columns: 1fr 1fr;
     /*     width: calc(var(--width-wrapper) + 4rem); */
     margin: 2.5rem auto 4rem auto;
     justify-items: baseline;
   }
+  .before_after-img-mobile {
+    display: none;
+  }
+  .before_after-img {
+    margin: 1rem auto;
+
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: cover;
+  }
 }
 @media only screen and (min-width: 807px) {
   .hero-section,
   .hero-section.hero-section__gutwork {
     min-height: max(650px, 80svh) !important;
+  }
+  .bg__text--background {
+    margin-bottom: 1rem;
   }
   .bg__text--background .big-text {
     font-size: clamp(1rem, 12vw, 5rem) !important;
@@ -2206,14 +2307,20 @@ option {
   }
   .hero-container {
     height: 100%;
-    top: 50%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
   }
+  .hero-text h1 {
+    text-align: left !important;
+  }
+
   .presentation-wrapper,
-  .hero-container,
   .header-wrapper {
     max-width: 1440px;
     margin: 0 auto;
   }
+
   .heading-text {
     text-align: left;
     align-self: baseline;
@@ -2302,6 +2409,14 @@ option {
 }
 
 @media screen and (min-width: 1440px) {
+  .hero-container {
+    padding-left: 50px;
+
+    grid-template-columns: 40% 60%;
+  }
+  .nick_welcome-frame {
+    max-width: 980px;
+  }
   .work--block__text {
     gap: 2rem;
   }
@@ -2339,6 +2454,14 @@ option {
 }
 
 @media screen and (min-width: 1840px) {
+  .nick-hero_img {
+    background: url(/_next/static/media/nick.65e04755.webp);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 82% 0;
+    background-repeat: no-repeat;
+  }
   .redirect--block,
   .results--page {
     height: calc(100% - 194px);
@@ -2347,7 +2470,6 @@ option {
     transform: translate(0, 0);
   }
   .presentation-wrapper,
-  .hero-container,
   .header-wrapper {
     max-width: 90%;
     margin: 0 auto;
