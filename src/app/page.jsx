@@ -55,6 +55,16 @@ function HomeScreen() {
               Become The Best <br />
               <span className="primary-color-accent">Version Of Yourself</span>
             </h1>
+            <p
+              style={{
+                color: "#ffffff",
+                marginBottom: "1rem",
+                fontSize: "1.2rem",
+              }}
+            >
+              To discuss your goals, please send your inquiry and I will respond
+              as soon as possible.
+            </p>
             <div className="opt-in_form">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/8wn9O7uE0Ss3tL5ILlcS"

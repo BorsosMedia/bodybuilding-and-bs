@@ -56,7 +56,7 @@ button {
 
 h1 {
   line-height: 81% !important;
-  font-size: clamp(1rem, 16vw, 7rem) !important;
+  font-size: clamp(1rem, 16vw, 6.5rem) !important;
 }
 
 h2 {
@@ -834,6 +834,9 @@ body .hl-app .form-builder--wrap {
   background-size: cover;
   background-position: 50% 0;
   background-repeat: no-repeat;
+}
+.opt-in_form {
+  width: 100%;
 }
 /* .hero-section::after {
   content: "";
@@ -1978,6 +1981,11 @@ option {
     max-width: var(--text-max-width);
     margin-inline: auto;
   } */
+  .opt-in_form {
+    max-width: 500px;
+    display: grid;
+    justify-items: baseline;
+  }
   .bullet--block_wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -2307,7 +2315,7 @@ option {
   }
   .hero-container {
     height: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 52% 48%;
     grid-template-rows: auto;
     align-items: center;
   }
@@ -2356,6 +2364,7 @@ option {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-right: 0;
   }
   .hero-section .button {
     align-self: flex-start;
@@ -2410,9 +2419,7 @@ option {
 
 @media screen and (min-width: 1440px) {
   .hero-container {
-    padding-left: 50px;
-
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 1fr 1fr;
   }
   .nick_welcome-frame {
     max-width: 980px;
@@ -2454,8 +2461,11 @@ option {
 }
 
 @media screen and (min-width: 1840px) {
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 100px;
+  }
   .nick-hero_img {
-    background: url(/_next/static/media/nick.65e04755.webp);
     height: 100%;
     width: 100%;
     background-size: cover;
