@@ -680,8 +680,9 @@ a {
 } */
 
 /* consultation Box  */
-.inquiry--wrapper.consultation--wrapper {
+.inquiry--inner_wrapper {
   background: url("media/central-layer.png");
+  background-size: cover;
 }
 .inquiry--wrapper.consultation--wrapper .inquiry--block {
   background: url(./media/Icons/phone.svg);
@@ -689,6 +690,9 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   padding: 2rem 1rem;
+  display: grid;
+  align-items: center;
+  align-content: center;
 }
 .inquiry--wrapper.consultation--wrapper .button {
   margin-inline: auto;
@@ -697,6 +701,22 @@ a {
   margin-top: 0;
   max-width: 13.06rem;
 }
+
+.consulation-img_wrapper {
+  height: 406px;
+  overflow: hidden;
+  background: url(./media/Nick-call-section.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 12%;
+  margin: 2rem 1rem 0 1rem;
+  border-radius: 0.625rem;
+  border: 5px solid var(--white-color);
+}
+/* .consulation-img_wrapper img {
+  width: 100%;
+  height: auto;
+} */
 
 /*  */
 
@@ -1929,6 +1949,10 @@ option {
 }
 
 @media only screen and (min-width: 750px) {
+  .inquiry--wrapper.consultation--wrapper .inquiry--block {
+    justify-items: baseline;
+    text-align: left;
+  }
   .nick-hero_img {
     background-position: 50% 0;
   }
@@ -1962,6 +1986,37 @@ option {
   }
 }
 @media only screen and (min-width: 807px) {
+  .inquiry--inner_wrapper {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    max-width: 760px;
+    margin-inline: auto;
+    align-items: center;
+    align-content: center;
+    max-height: 400px;
+    height: 380px;
+    gap: 1rem;
+  }
+  .inquiry--wrapper.consultation--wrapper .inquiry--block {
+    padding: 0;
+  }
+  .consulation-img_wrapper {
+    margin: 0;
+    height: 446px;
+    width: 345px;
+    background-position: 100%;
+    position: relative;
+    z-index: 50;
+  }
+
+  .inquiry--wrapper.consultation--wrapper .button {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .inquiry--inner_wrapper .inquiry--block h5,
+  .inquiry--inner_wrapper .inquiry--block p {
+    text-align: left;
+  }
   .hero-section,
   .hero-section.hero-section__gutwork {
     min-height: max(650px, 80svh) !important;
@@ -1977,6 +2032,13 @@ option {
   }
 }
 @media only screen and (min-width: 980px) {
+  .inquiry--inner_wrapper {
+    gap: 4rem;
+    width: var(--width-wrapper);
+  }
+  .consulation-img_wrapper {
+    max-width: 22.5rem;
+  }
   /* .gut--section-wrapper p {
     max-width: var(--text-max-width);
     margin-inline: auto;
