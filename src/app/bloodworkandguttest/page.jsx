@@ -90,8 +90,8 @@ function GutServiceScreen() {
   }
   return (
     <>
-      <main className="hero-section hero-section__gutwork">
-        <div className="heroImg"></div>
+      <main className="hero-section__gutwork">
+        {/*     <div className="heroImg"></div> */}
 
         <div className="hero-container">
           <div className="hero-text">
@@ -111,7 +111,7 @@ function GutServiceScreen() {
             </button>
           </div>
         </div>
-        <div className="hero__bullet-points">
+        {/* <div className="hero__bullet-points">
           <div>
             <Image src={IFBB} alt="IFBB Logo" />
             <p>IFBB Pro</p>
@@ -120,7 +120,7 @@ function GutServiceScreen() {
             <Image src={USflag} alt="US Flag" />
             <p>Former Mr. Usa</p>
           </div>
-        </div>
+        </div> */}
       </main>
       <div className="gut-service__wrapper">
         <div className="gut--service__block" ref={GutRef}>

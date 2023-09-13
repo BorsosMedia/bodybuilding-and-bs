@@ -1130,23 +1130,64 @@ body .hl-app .form-builder--wrap {
   margin-bottom: 1rem;
   text-align: center !important;
 }
-.hero-section.hero-section__gutwork {
-  min-height: 70svh;
-  min-height: 70vh;
-  max-height: max(550px, 65svh);
+.hero-section__gutwork {
+  min-height: 500px;
+  place-content: center;
+  max-height: initial;
+  position: relative;
+  background: url("./media/background-gradient.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-.hero-section.hero-section__gutwork .hero-text {
+
+.hero-section__gutwork::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  left: 0;
+  height: 1rem;
+  background-color: var(--primary-color);
+  z-index: 4;
+  transform: rotate(1deg);
+}
+.hero-section__gutwork::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  transform: rotate(-1deg);
+  height: 1rem;
+  background-color: var(--primary-color);
+  z-index: 4;
+}
+
+.hero-section__gutwork .hero-container {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section__gutwork .hero-text {
   display: grid;
   justify-items: center;
   gap: 1rem;
 }
-.hero-section__gutwork .hero-container {
+/* .hero-section__gutwork .hero-container {
   top: 45%;
-}
-.hero-section.hero-section__gutwork h1 {
+} */
+.hero-section__gutwork h1 {
   text-align: center;
 }
-.hero-section.hero-section__gutwork .bbs--logo {
+.hero-section__gutwork .bbs--logo {
   margin-right: initial;
 }
 .description-text {
@@ -2491,11 +2532,15 @@ option {
     padding-right: 0;
   }
   .hero-container {
-    height: 100%;
+    background: url(./media/nick.webp);
     grid-template-columns: 52% 48%;
+  }
+  .hero-container {
+    height: 100%;
+
     grid-template-rows: auto;
     align-items: center;
-    background: url(./media/nick.webp);
+
     background-repeat: no-repeat;
     background-position: 400px bottom;
     background-size: contain;
@@ -2506,6 +2551,9 @@ option {
   }
 }
 @media screen and (min-width: 1440px) {
+  .hero-section__gutwork {
+    min-height: 700px;
+  }
   .hero-section {
     max-height: 850px;
     min-height: 80vh;
