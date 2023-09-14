@@ -2031,7 +2031,7 @@ option {
 
     display: block;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     height: auto;
     object-fit: cover;
   }
@@ -2603,8 +2603,8 @@ option {
   .hero-container {
     grid-template-columns: 1fr 1fr;
     max-width: 1900px;
-    background-position: 374px bottom;
-    background-size: initial;
+    background-position: 484px bottom;
+    background-size: 1431px;
     min-height: 80vh !important;
   }
 
