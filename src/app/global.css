@@ -35,7 +35,7 @@ body:hover::-webkit-scrollbar-thumb {
   --transition: 0.4s ease;
   --white-color: #ffffff;
   --min-height: 3rem;
-  --width-wrapper: 46rem;
+  --width-wrapper: 51rem;
   --text-max-width: 27rem;
   --radius: 2rem;
   --text-spacing: 0.5rem;
@@ -2544,6 +2544,7 @@ option {
     background-repeat: no-repeat;
     background-position: 400px bottom;
     background-size: contain;
+    padding-left: 82px;
   }
   .hero-section {
     max-height: 85vh;
@@ -2603,9 +2604,10 @@ option {
   .hero-container {
     grid-template-columns: 1fr 1fr;
     max-width: 1900px;
-    background-position: 484px bottom;
-    background-size: 1431px;
+    background-position: 539px bottom;
+    background-size: 1353px;
     min-height: 80vh !important;
+    padding-left: 145px;
   }
 
   .redirect--block,

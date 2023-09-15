@@ -255,7 +255,9 @@ const NormalPlans = ({ TypeOfPlan }) => {
           </span>
         </h4>
         <ul>
-          <li className="card-list">Flexible and Frequent Check-Ins</li>
+          <li className="card-list">
+            Flexible & Frequent Check-Ins (Only Calls/SMS - No Email)
+          </li>
           <li className="card-list">Tailored Training and Nutrition Plans</li>
           <li className="card-list">Cutting-Edge PED Programming</li>
           <li className="card-list">
