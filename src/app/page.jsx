@@ -232,9 +232,9 @@ function HomeScreen() {
         </div>
         <NormalPlans TypeOfPlan={TypeOfPlan} />
         <ConsultationBox />
-        <CustomPlans />
-        <InquiryMessage />
+        {/* <CustomPlans /> */}
         <Bloodwork />
+        <InquiryMessage />
         <GutSection IsGutActive={IsGutActive} setIsGutActive={setIsGutActive} />
         <Services />
         <DiscordSection />
