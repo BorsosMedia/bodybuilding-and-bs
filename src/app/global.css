@@ -852,7 +852,7 @@ body .hl-app .form-builder--wrap {
   height: 100%;
   width: 100%;
   background-size: cover;
-  background-position: 50% 0;
+  background-position: 50% -38px;
   background-repeat: no-repeat;
 }
 .opt-in_form {
@@ -2516,7 +2516,6 @@ option {
   }
   .nick-hero_img {
     background: none;
-    background-position: 50% 0;
   }
   .heading-text {
     text-align: left;
