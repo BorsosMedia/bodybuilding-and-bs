@@ -157,7 +157,7 @@ function GutServiceScreen() {
               <a className="purchase-button-link">
                 <button
                   className="button button--affirm"
-                  onClick={() => HandleAffirmButton("Bloodwork", 24900)}
+                  onClick={() => HandleAffirmButton("Bloodwork", 29900)}
                 >
                   Pay with
                   <Image
@@ -225,7 +225,7 @@ function GutServiceScreen() {
               <a className="purchase-button-link">
                 <button
                   className="button button--affirm"
-                  onClick={() => HandleAffirmButton("Gut Health Test", 34900)}
+                  onClick={() => HandleAffirmButton("Gut Health Test", 79900)}
                 >
                   Pay with
                   <Image
