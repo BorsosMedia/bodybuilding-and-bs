@@ -167,6 +167,25 @@ function GutServiceScreen() {
                   />
                 </button>
               </a>
+              <div>
+                <span
+                  className="card-list"
+                  style={{ fontWeight: "bold", color: "black" }}
+                >
+                  4 interest-free payments or as low as $25/mo with
+                </span>
+                <Image
+                  src={AffirmLogo}
+                  alt="Affirm Logo"
+                  className="img--afirm"
+                  style={{
+                    width: "40px",
+                    height: "auto",
+                    filter: "invert(1)",
+                    margin: "0 10px",
+                  }}
+                />
+              </div>
             </div>
             <div className="blood-gut-text">
               <p>
@@ -235,6 +254,25 @@ function GutServiceScreen() {
                   />
                 </button>
               </a>
+              <div>
+                <span
+                  className="card-list"
+                  style={{ fontWeight: "bold", color: "black" }}
+                >
+                  Starting at $45/mo or 0% APR with
+                </span>
+                <Image
+                  src={AffirmLogo}
+                  alt="Affirm Logo"
+                  className="img--afirm"
+                  style={{
+                    width: "40px",
+                    height: "auto",
+                    filter: "invert(1)",
+                    margin: "0 10px",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>

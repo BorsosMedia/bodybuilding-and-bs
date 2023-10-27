@@ -304,6 +304,87 @@ const NormalPlans = ({ TypeOfPlan }) => {
             <Image src={AffirmLogo} alt="Affirm Logo" className="img--afirm" />
           </button>
         </a>
+
+        {(() => {
+          switch (TypeOfPlan) {
+            case "a":
+              return (
+                <div>
+                  <span className="card-list" style={{ fontWeight: "bold" }}>
+                    As low as $25/mo with
+                  </span>
+                  <Image
+                    src={AffirmLogo}
+                    alt="Affirm Logo"
+                    className="img--afirm"
+                    style={{
+                      width: "40px",
+                      height: "auto",
+                      filter: "invert(1)",
+                      margin: "0 10px",
+                    }}
+                  />
+                </div>
+              );
+            case "b":
+              return (
+                <div>
+                  <span className="card-list" style={{ fontWeight: "bold" }}>
+                    Starting at $45/mo or 0% APR with
+                  </span>
+                  <Image
+                    src={AffirmLogo}
+                    alt="Affirm Logo"
+                    className="img--afirm"
+                    style={{
+                      width: "40px",
+                      height: "auto",
+                      filter: "invert(1)",
+                      margin: "0 10px",
+                    }}
+                  />
+                </div>
+              );
+            case "d":
+              return (
+                <div>
+                  <span className="card-list" style={{ fontWeight: "bold" }}>
+                    Starting at $84/mo or 0% APR with
+                  </span>
+                  <Image
+                    src={AffirmLogo}
+                    alt="Affirm Logo"
+                    className="img--afirm"
+                    style={{
+                      width: "40px",
+                      height: "auto",
+                      filter: "invert(1)",
+                      margin: "0 10px",
+                    }}
+                  />
+                </div>
+              );
+            case "e":
+              return (
+                <div>
+                  <span className="card-list" style={{ fontWeight: "bold" }}>
+                    Starting at $118/mo or 0% APR with
+                  </span>
+                  <Image
+                    src={AffirmLogo}
+                    alt="Affirm Logo"
+                    className="img--afirm"
+                    style={{
+                      width: "40px",
+                      height: "auto",
+                      filter: "invert(1)",
+                      margin: "0 10px",
+                    }}
+                  />
+                </div>
+              );
+          }
+        })()}
       </div>
       <div className="faq--block">
         <div className="faq--item">
