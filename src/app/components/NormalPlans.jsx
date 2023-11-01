@@ -1,108 +1,108 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState } from "react";
 import { TbShoppingCart } from "react-icons/tb";
-
+import Modal from "./Modal";
 import AffirmLogo from "../media/affirm-logo.webp";
 import Image from "next/image";
 
 const NormalPlans = ({ TypeOfPlan }) => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  function HandleAffirmButton() {
-    useEffect;
-    affirm.checkout({
-      merchant: {
-        user_confirmation_url: `${baseUrl}/checkout`,
-        user_cancel_url: `${baseUrl}`,
-        user_confirmation_url_action: "GET",
-        name: "Bodybuilding & BS",
-      },
-      shipping: {
-        name: {
-          first: "Joe",
-          last: "Doe",
-        },
-        address: {
-          line1: "633 Folsom St",
-          line2: "Floor 7",
-          city: "San Francisco",
-          state: "CA",
-          zipcode: "94107",
-          country: "USA",
-        },
-        phone_number: "4153334567",
-        email: "joedoe@123fakestreet.com",
-      },
-      billing: {
-        name: {
-          first: "Joe",
-          last: "Doe",
-        },
-        address: {
-          line1: "633 Folsom St",
-          line2: "Floor 7",
-          city: "San Francisco",
-          state: "CA",
-          zipcode: "94107",
-          country: "USA",
-        },
-        phone_number: "4153334567",
-        email: "joedoe@123fakestreet.com",
-      },
-      items: [
-        {
-          display_name: (() => {
-            switch (TypeOfPlan) {
-              case "a":
-                return "Monthly";
-              case "b":
-                return "3-month";
-              case "d":
-                return "6-Month";
-              case "e":
-                return "Annual";
-            }
-          })(),
-          sku: "ABC-123",
-          unit_price: (() => {
-            switch (TypeOfPlan) {
-              case "a":
-                return 29500;
-              case "b":
-                return 79650;
-              case "d":
-                return 150450;
-              case "e":
-                return 283200;
-            }
-          })(),
-          qty: 1,
-        },
-      ],
-      metadata: {
-        mode: "modal",
-      },
-      order_id: "JKLMO4321",
-      currency: "USD",
-      financing_program: "flyus_3z6r12r",
-      shipping_amount: 0,
-      tax_amount: 0,
-      total: (() => {
-        switch (TypeOfPlan) {
-          case "a":
-            return 29500;
-          case "b":
-            return 79650;
-          case "d":
-            return 150450;
-          case "e":
-            return 283200;
-        }
-      })(),
-    });
+  const [showModal, setShowModal] = useState(false);
+  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  // function HandleAffirmButton() {
+  //   affirm.checkout({
+  //     merchant: {
+  //       user_confirmation_url: `${baseUrl}/checkout`,
+  //       user_cancel_url: `${baseUrl}`,
+  //       user_confirmation_url_action: "GET",
+  //       name: "Bodybuilding & BS",
+  //     },
+  //     shipping: {
+  //       name: {
+  //         first: "Joe",
+  //         last: "Doe",
+  //       },
+  //       address: {
+  //         line1: "633 Folsom St",
+  //         line2: "Floor 7",
+  //         city: "San Francisco",
+  //         state: "CA",
+  //         zipcode: "94107",
+  //         country: "USA",
+  //       },
+  //       phone_number: "4153334567",
+  //       email: "joedoe@123fakestreet.com",
+  //     },
+  //     billing: {
+  //       name: {
+  //         first: "Joe",
+  //         last: "Doe",
+  //       },
+  //       address: {
+  //         line1: "633 Folsom St",
+  //         line2: "Floor 7",
+  //         city: "San Francisco",
+  //         state: "CA",
+  //         zipcode: "94107",
+  //         country: "USA",
+  //       },
+  //       phone_number: "4153334567",
+  //       email: "joedoe@123fakestreet.com",
+  //     },
+  //     items: [
+  //       {
+  //         display_name: (() => {
+  //           switch (TypeOfPlan) {
+  //             case "a":
+  //               return "Monthly";
+  //             case "b":
+  //               return "3-month";
+  //             case "d":
+  //               return "6-Month";
+  //             case "e":
+  //               return "Annual";
+  //           }
+  //         })(),
+  //         sku: "ABC-123",
+  //         unit_price: (() => {
+  //           switch (TypeOfPlan) {
+  //             case "a":
+  //               return 29500;
+  //             case "b":
+  //               return 79650;
+  //             case "d":
+  //               return 150450;
+  //             case "e":
+  //               return 283200;
+  //           }
+  //         })(),
+  //         qty: 1,
+  //       },
+  //     ],
+  //     metadata: {
+  //       mode: "modal",
+  //     },
+  //     order_id: "JKLMO4321",
+  //     currency: "USD",
+  //     financing_program: "flyus_3z6r12r",
+  //     shipping_amount: 0,
+  //     tax_amount: 0,
+  //     total: (() => {
+  //       switch (TypeOfPlan) {
+  //         case "a":
+  //           return 29500;
+  //         case "b":
+  //           return 79650;
+  //         case "d":
+  //           return 150450;
+  //         case "e":
+  //           return 283200;
+  //       }
+  //     })(),
+  //   });
 
-    affirm.checkout.open();
-  }
+  //   affirm.checkout.open();
+  // }
 
   return (
     <div className="card-wrapper mn">
@@ -298,13 +298,18 @@ const NormalPlans = ({ TypeOfPlan }) => {
         <a className="purchase-button-link">
           <button
             className="button button--affirm"
-            onClick={HandleAffirmButton}
+            // onClick={HandleAffirmButton}
+            onClick={() => {
+              setShowModal(true);
+            }}
           >
             Pay with
             <Image src={AffirmLogo} alt="Affirm Logo" className="img--afirm" />
           </button>
         </a>
-
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)} TypeOfPlan={TypeOfPlan} />
+        )}
         {(() => {
           switch (TypeOfPlan) {
             case "a":

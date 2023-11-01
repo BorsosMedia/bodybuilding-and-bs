@@ -8,8 +8,11 @@ import USflag from "../media/usflag.png";
 import IFBB from "../media/ifbb.png";
 import AffirmLogo from "../media/affirm-logo.webp";
 import { useLayoutEffect } from "react";
+import Modal from "../components/Modal";
 
 function GutServiceScreen() {
+  const [showModal, setShowModal] = useState(false);
+  const [TypeOfPlan, setTypeOfPlan] = useState("");
   const [IsGutActive, setIsGutActive] = useState(false);
   const GutSection = useRef();
   const GutRef = useRef();
@@ -27,67 +30,67 @@ function GutServiceScreen() {
       top: 0,
     });
   }, []);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  function HandleAffirmButton(name, price) {
-    affirm.checkout({
-      merchant: {
-        user_confirmation_url: `${baseUrl}/checkout`,
-        user_cancel_url: `${baseUrl}/bloodworkandguttest`,
-        user_confirmation_url_action: "GET",
-        name: "Bodybuilding & BS",
-      },
-      shipping: {
-        name: {
-          first: "Joe",
-          last: "Doe",
-        },
-        address: {
-          line1: "633 Folsom St",
-          line2: "Floor 7",
-          city: "San Francisco",
-          state: "CA",
-          zipcode: "94107",
-          country: "USA",
-        },
-        phone_number: "4153334567",
-        email: "joedoe@123fakestreet.com",
-      },
-      billing: {
-        name: {
-          first: "Joe",
-          last: "Doe",
-        },
-        address: {
-          line1: "633 Folsom St",
-          line2: "Floor 7",
-          city: "San Francisco",
-          state: "CA",
-          zipcode: "94107",
-          country: "USA",
-        },
-        phone_number: "4153334567",
-        email: "joedoe@123fakestreet.com",
-      },
-      items: [
-        {
-          display_name: name,
-          sku: "ABC-123",
-          unit_price: price,
-          qty: 1,
-        },
-      ],
-      metadata: {
-        mode: "modal",
-      },
-      order_id: "JKLMO4321",
-      currency: "USD",
-      financing_program: "flyus_3z6r12r",
-      shipping_amount: 0,
-      tax_amount: 0,
-      total: price,
-    });
-    affirm.checkout.open();
-  }
+  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  // function HandleAffirmButton(name, price) {
+  //   affirm.checkout({
+  //     merchant: {
+  //       user_confirmation_url: `${baseUrl}/checkout`,
+  //       user_cancel_url: `${baseUrl}/bloodworkandguttest`,
+  //       user_confirmation_url_action: "GET",
+  //       name: "Bodybuilding & BS",
+  //     },
+  //     shipping: {
+  //       name: {
+  //         first: "Joe",
+  //         last: "Doe",
+  //       },
+  //       address: {
+  //         line1: "633 Folsom St",
+  //         line2: "Floor 7",
+  //         city: "San Francisco",
+  //         state: "CA",
+  //         zipcode: "94107",
+  //         country: "USA",
+  //       },
+  //       phone_number: "4153334567",
+  //       email: "joedoe@123fakestreet.com",
+  //     },
+  //     billing: {
+  //       name: {
+  //         first: "Joe",
+  //         last: "Doe",
+  //       },
+  //       address: {
+  //         line1: "633 Folsom St",
+  //         line2: "Floor 7",
+  //         city: "San Francisco",
+  //         state: "CA",
+  //         zipcode: "94107",
+  //         country: "USA",
+  //       },
+  //       phone_number: "4153334567",
+  //       email: "joedoe@123fakestreet.com",
+  //     },
+  //     items: [
+  //       {
+  //         display_name: name,
+  //         sku: "ABC-123",
+  //         unit_price: price,
+  //         qty: 1,
+  //       },
+  //     ],
+  //     metadata: {
+  //       mode: "modal",
+  //     },
+  //     order_id: "JKLMO4321",
+  //     currency: "USD",
+  //     financing_program: "flyus_3z6r12r",
+  //     shipping_amount: 0,
+  //     tax_amount: 0,
+  //     total: price,
+  //   });
+  //   affirm.checkout.open();
+  // }
   return (
     <>
       <main className="hero-section__gutwork">
@@ -157,7 +160,11 @@ function GutServiceScreen() {
               <a className="purchase-button-link">
                 <button
                   className="button button--affirm"
-                  onClick={() => HandleAffirmButton("Bloodwork", 29900)}
+                  // onClick={() => HandleAffirmButton("Bloodwork", 29900)}
+                  onClick={() => {
+                    setTypeOfPlan("f");
+                    setShowModal(true);
+                  }}
                 >
                   Pay with
                   <Image
@@ -244,7 +251,11 @@ function GutServiceScreen() {
               <a className="purchase-button-link">
                 <button
                   className="button button--affirm"
-                  onClick={() => HandleAffirmButton("Gut Health Test", 79900)}
+                  // onClick={() => HandleAffirmButton("Gut Health Test", 79900)}
+                  onClick={() => {
+                    setTypeOfPlan("g");
+                    setShowModal(true);
+                  }}
                 >
                   Pay with
                   <Image
@@ -254,6 +265,12 @@ function GutServiceScreen() {
                   />
                 </button>
               </a>
+              {showModal && (
+                <Modal
+                  onClose={() => setShowModal(false)}
+                  TypeOfPlan={TypeOfPlan}
+                />
+              )}
               <div>
                 <span
                   className="card-list"
