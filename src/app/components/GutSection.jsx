@@ -5,10 +5,10 @@ import GutEnzime from "../media/gut-enzime.webp";
 import GutMicrobiome from "../media/gut-microbiome.webp";
 import GutBacteria from "../media/gut-bacteria.webp";
 function GutSection({ IsGutActive, setIsGutActive }) {
-  const HandleGutButton = () => {
+  /*   const HandleGutButton = () => {
     setIsGutActive(true);
     console.log(IsGutActive);
-  };
+  }; */
   return (
     <div className="gut--section-wrapper">
       <h2 className="text--white mn--title">
@@ -26,10 +26,10 @@ function GutSection({ IsGutActive, setIsGutActive }) {
         <Image src={GutMicrobiome} alt="Microbiome Example" />
         <Image src={GutBacteria} alt="Gut Bacteria" />
       </div>
-      <Link href="/bloodworkandguttest">
-        <button className="button" onClick={HandleGutButton}>
-          LEARN MORE
-        </button>
+      <Link href="/bloodworkandguttest" className="button">
+        {/*   <button className="button" onClick={HandleGutButton}> */}
+        LEARN MORE
+        {/*         </button> */}
       </Link>
     </div>
   );

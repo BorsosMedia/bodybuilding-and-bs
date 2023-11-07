@@ -21,6 +21,7 @@ function InquiryMessage() {
               width: "100%",
               border: "none",
             }}
+            className="inquiry-form"
             marginHeight="0"
             marginWidth="0"
             id="inline-ACSZJwg3R1pHmXny3sFM"

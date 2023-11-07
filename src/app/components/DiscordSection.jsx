@@ -8,7 +8,11 @@ function DiscordSection() {
   return (
     <div className="discord--block mn">
       <div className="discord--img">
-        <Image src={NickDiscord} alt="Discord logo on top of Nick's Face" />
+        <Image
+          loading="lazy"
+          src={NickDiscord}
+          alt="Discord logo on top of Nick's Face"
+        />
       </div>
       <div className="discord--text">
         <h2>

@@ -26,6 +26,7 @@ import ConsultationBox from "./components/ConsultationBox";
 import BeforeAfterMobile from "./media/before-after-mobile.png";
 import BeforeAfter from "./media/before-after.png";
 import WhatsappWidget from "./components/WhatsappWidget";
+import EBooks from "./components/EBooks";
 
 function HomeScreen() {
   const [IsGutActive, setIsGutActive] = useState(false);
@@ -232,6 +233,7 @@ function HomeScreen() {
         </div>
         <NormalPlans TypeOfPlan={TypeOfPlan} />
         <ConsultationBox />
+        {/*    <EBooks /> */}
         {/* <CustomPlans /> */}
         <Bloodwork />
         <InquiryMessage />
